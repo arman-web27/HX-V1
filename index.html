@@ -1,0 +1,2093 @@
+<!doctype html>
+<html lang="gu">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#050507" />
+      <title>HerbalX - Relief Oil — આયુર્વેદિક હર્બલ પાવડર</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <style>
+    :root {
+      --bg-dark: #040406;
+      --bg-card: #0D0D11;
+      --bg-card-alt: #14141A;
+      --text-white: #FFFFFF;
+      --muted: #A3A3B3;
+      --red-accent: #FF334B;
+      --red-light: #FF6678;
+      --red-primary: #E50914;
+      --red-dark: #991B1B;
+      --red-glow: rgba(229, 9, 20, 0.45);
+      --red-gradient: linear-gradient(135deg, #FF4D61 0%, #E50914 45%, #B91C1C 80%, #7F1D1D 100%);
+      --line: rgba(229, 9, 20, 0.25);
+      --line-subtle: rgba(255, 255, 255, 0.08);
+      --w: 450px;
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+      background: var(--bg-dark);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-white);
+      font-family: 'Noto Sans Gujarati', 'Mukta Vaani', sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a,
+    input {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid var(--red-accent);
+      outline-offset: 4px;
+    }
+
+    .page {
+      max-width: var(--w);
+      margin: auto;
+      background: var(--bg-dark);
+      min-height: 100vh;
+      padding-bottom: 75px;
+      overflow: hidden;
+      border-inline: 1px solid var(--line);
+      box-shadow: 0 0 70px rgba(0, 0, 0, 0.98), 0 0 30px rgba(229, 9, 20, 0.08);
+    }
+
+    section {
+      padding: 28px 20px;
+      border-bottom: 1px solid var(--line-subtle);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: 700;
+      color: var(--text-white);
+    }
+
+    h1,
+    h2 {
+      font-size: 29px;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-size: 19px;
+      line-height: 1.35;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--red-accent);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      text-shadow: 0 0 12px var(--red-glow);
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: var(--red-accent);
+      box-shadow: 0 0 8px var(--red-accent);
+    }
+
+    .accent {
+      color: var(--red-accent);
+      text-shadow: 0 0 16px rgba(255, 51, 75, 0.45);
+    }
+
+    .banner {
+      padding: 0;
+      border: 0;
+      position: relative;
+    }
+
+    .banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Symptoms Section */
+    .problem-roadmap {
+      padding: 34px 20px;
+      background: radial-gradient(circle at 50% 0%, #1A0709 0%, var(--bg-dark) 75%);
+    }
+
+    .problem-roadmap>.eyebrow,
+    .problem-roadmap>h2 {
+      text-align: center;
+      display: block;
+    }
+
+    .problem-roadmap>.eyebrow {
+      font-size: 18px;
+    }
+
+    .problem-roadmap>h2 {
+      margin-top: 6px;
+    }
+
+    .symptom-flow {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin-top: 26px;
+      gap: 14px;
+    }
+
+    .symptom-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--line-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      transition: border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .symptom-card:hover {
+      border-color: var(--red-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(229, 9, 20, 0.25);
+    }
+
+    .symptom-card figure {
+      display: flex;
+      flex-direction: row;
+      min-height: 138px;
+      margin: 0;
+    }
+
+    .symptom-photo {
+      flex: 0 0 46%;
+      position: relative;
+      background: #0E0E14;
+      display: grid;
+      place-items: center;
+      color: var(--red-accent);
+      border-right: 1px solid var(--line-subtle);
+    }
+
+    .symptom-card:nth-of-type(even) .symptom-photo {
+      order: 2;
+      border-right: 0;
+      border-left: 1px solid var(--line-subtle);
+    }
+
+    .symptom-card:nth-of-type(even) figcaption {
+      order: 1;
+    }
+
+    .symptom-photo i {
+      font-size: 32px !important;
+      color: var(--red-accent);
+      opacity: 0.85;
+    }
+
+    .symptom-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .symptom-card figcaption {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, #100C0E, #09090C);
+      gap: 6px;
+    }
+
+    .symptom-node {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--red-accent);
+    }
+
+    .symptom-card h3 {
+      font-size: 17px !important;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--text-white);
+    }
+
+    /* Product Section */
+    #product-intro {
+      background: radial-gradient(ellipse at 50% 20%, #1A0507 0%, var(--bg-dark) 70%);
+      padding-block: 40px;
+    }
+
+    #product-intro>.eyebrow,
+    #product-intro>h2 {
+      text-align: center;
+      display: block;
+    }
+
+    .earcare-poster {
+      margin-top: 26px;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .earcare-poster-header {
+      display: none;
+    }
+
+    .earcare-orbit {
+      padding: 20px 16px 0;
+    }
+
+    .earcare-orbit-disc {
+      position: relative;
+      width: 100%;
+      max-width: 330px;
+      min-height: 285px;
+      margin: 0 auto 24px;
+      padding: 26px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, #170A0C 0%, #0A0A0E 100%);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4), inset 0 0 24px rgba(229, 9, 20, 0.15);
+    }
+
+    .earcare-orbit-product {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      filter: drop-shadow(0 16px 18px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 18px rgba(229, 9, 20, 0.25));
+      transform: scale(1.04);
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
+
+    .earcare-orbit-disc:hover .earcare-orbit-product {
+      transform: scale(1.08);
+      filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 24px rgba(255, 51, 75, 0.35));
+    }
+
+    .earcare-callouts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: center;
+      gap: 14px;
+      padding: 0 4px 4px;
+      list-style: none;
+    }
+
+    .earcare-callouts>li:nth-child(-n+3) {
+      min-height: 118px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 14px 8px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #14080A, #0A0A0E);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    .earcare-callouts>li:nth-child(1) { grid-column: 1 / 2; }
+    .earcare-callouts>li:nth-child(2) { grid-column: 2 / 3; }
+    .earcare-callouts>li:nth-child(3) { grid-column: 3 / 4; }
+
+    .earcare-callouts>li:nth-child(-n+3) .earcare-callout-icon,
+    .earcare-callouts>li:nth-child(-n+3) small { display: none; }
+    .earcare-callouts>li:nth-child(-n+3) strong { font-size: 0; }
+    .earcare-callouts>li:nth-child(-n+3) strong::before,
+    .earcare-callouts>li:nth-child(-n+3) strong::after { display: block; line-height: 1.2; }
+    .earcare-callouts>li:nth-child(-n+3) strong::before { color: var(--red-accent); font-size: 28px; margin-bottom: 8px; font-weight: 800; }
+    .earcare-callouts>li:nth-child(-n+3) strong::after { color: var(--text-white); font-size: 14px; font-weight: 600; }
+    
+    .earcare-callouts>li:nth-child(1) strong::before { content: "6"; }
+    .earcare-callouts>li:nth-child(1) strong::after { content: "ઔષધિઓ"; }
+    .earcare-callouts>li:nth-child(2) strong::before { content: "100%"; }
+    .earcare-callouts>li:nth-child(2) strong::after { content: "આયુર્વેદિક"; }
+    .earcare-callouts>li:nth-child(3) strong::before { content: "0"; }
+    .earcare-callouts>li:nth-child(3) strong::after { content: "કેમિકલ્સ"; }
+    .earcare-callouts>li:nth-child(4) { display: none; }
+    .earcare-callouts>.proof-pill { display: none !important; }
+
+    .earcare-poster-note {
+      margin: 20px 16px 0;
+      padding: 0px;
+      border-top: 1px solid var(--line-subtle);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+      display: block;
+      text-align: center;
+    }
+
+    .earcare-poster-note p:first-child {
+      font-size: 0;
+      margin: 0;
+    }
+
+    .earcare-poster-note p:first-child::after {
+      content: "સાંધા અને સ્નાયુઓની રોજિંદી સંભાળ અને હળવી માલિશ માટે લાભદાયી.";
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* How It Works */
+    #how-it-works {
+      background: var(--bg-dark);
+      padding-block: 38px;
+    }
+
+    #how-it-works>.eyebrow,
+    #how-it-works>h2 {
+      text-align: center;
+      display: block;
+      font-size: 25px;
+      line-height: 1.35;
+      max-width: 390px;
+      margin-inline: auto;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .support-card {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      min-height: 176px;
+      padding: 0;
+      border: 1px solid var(--line-subtle);
+      border-left: 3px solid var(--red-accent);
+      border-radius: 14px;
+      overflow: hidden;
+      text-align: left;
+      background: linear-gradient(135deg, #12090B 0%, #08080A 100%);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .support-card:nth-child(even) {
+      flex-direction: row-reverse;
+      border-left: 1px solid var(--line-subtle);
+      border-right: 3px solid var(--red-accent);
+    }
+
+    .support-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--red-accent);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 0 22px rgba(229, 9, 20, 0.2);
+    }
+
+    .support-image {
+      flex: 0 0 42%;
+      width: 42%;
+      position: relative;
+      min-height: 176px;
+      background: #09090C;
+      overflow: hidden;
+    }
+
+    .support-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-right: 1px solid var(--line-subtle);
+      z-index: 2;
+    }
+
+    .support-card:nth-child(even) .support-image::before {
+      border-right: 0;
+      border-left: 1px solid var(--line-subtle);
+    }
+
+    .support-image>i { display: none; }
+
+    .support-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .support-card:hover .support-photo {
+      transform: scale(1.06);
+    }
+
+    .support-copy {
+      flex: 1;
+      min-width: 0;
+      padding: 18px 16px;
+    }
+
+    .support-card h3 {
+      font-size: 18px;
+      color: var(--text-white);
+    }
+
+    .support-card p {
+      margin-top: 7px;
+      font-size: 14.5px;
+      line-height: 1.55;
+    }
+
+    /* Ingredients */
+    #ingredients {
+      background: radial-gradient(ellipse at 50% 0%, #170709 0%, var(--bg-dark) 70%);
+      padding-block: 36px;
+    }
+
+    #ingredients>.eyebrow,
+    #ingredients>h2,
+    #ingredients>p {
+      text-align: center;
+      display: block;
+    }
+
+    .ingredient-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .herb {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid var(--line-subtle);
+      border-radius: 16px;
+      background: linear-gradient(145deg, #12090B 0%, #0A0A0E 100%);
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .herb:hover {
+      transform: translateY(-4px);
+      border-color: var(--red-accent);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45), 0 0 18px rgba(229, 9, 20, 0.2);
+    }
+
+    .herb-image {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1.25;
+      overflow: hidden;
+      border-radius: 11px;
+      background: #0D0D12;
+      border: 1px solid var(--line-subtle);
+      display: grid;
+      place-items: center;
+    }
+
+    .herb-placeholder {
+      color: var(--red-accent);
+      font-size: 30px;
+    }
+
+    .herb-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .herb h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-white);
+      position: relative;
+      padding: 2px 4px 8px;
+    }
+
+    .herb h3::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 28px;
+      height: 2px;
+      background: var(--red-accent);
+      box-shadow: 0 0 8px var(--red-accent);
+    }
+
+    /* Quality Section */
+    #quality {
+      background: radial-gradient(ellipse at 50% 0%, #1A0709 0%, var(--bg-dark) 72%);
+      padding-block: 42px;
+    }
+
+    #quality>.eyebrow,
+    #quality>h2 {
+      text-align: center;
+      display: block;
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .quality-tile {
+      position: relative;
+      background: linear-gradient(145deg, #12090B 0%, #0A0A0E 100%);
+      border: 1px solid var(--line-subtle);
+      aspect-ratio: 0.82;
+      border-radius: 18px;
+      padding: 14px 10px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .quality-tile:hover {
+      transform: translateY(-4px);
+      border-color: var(--red-accent);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45), 0 0 18px rgba(229, 9, 20, 0.2);
+    }
+
+    .quality-art {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1.12;
+      border-radius: 12px;
+      background: #08080C;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      margin-bottom: 10px;
+      border: 1px solid var(--line-subtle);
+    }
+
+    .quality-art span {
+      color: var(--red-accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .quality-art img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 8px;
+      border-radius: 12px;
+    }
+
+    .quality-tile figcaption {
+      width: 100%;
+      margin-top: 10px;
+      padding: 6px 4px;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.2;
+      background: var(--red-gradient);
+      box-shadow: 0 4px 14px rgba(229, 9, 20, 0.3);
+    }
+
+    /* Routine / Spotlight */
+    #start-routine {
+      position: relative;
+      padding: 34px 20px 30px;
+      background: radial-gradient(circle at 50% 0%, #1E0709 0%, var(--bg-dark) 72%);
+      text-align: center;
+    }
+
+    #start-routine::after {
+      content: "સાંધાની રોજિંદી સંભાળ આજે જ શરૂ કરો";
+      display: block;
+      max-width: 390px;
+      margin: 18px auto 0;
+      padding: 14px 16px;
+      border-left: 3px solid var(--red-accent);
+      border-right: 3px solid var(--red-accent);
+      border-radius: 12px;
+      background: #0E0709;
+      color: #FFF;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    #start-routine>h2 {
+      max-width: 360px;
+      margin: 10px auto 0;
+      font-size: 0;
+      line-height: 1.25;
+    }
+
+    #start-routine>h2::after {
+      content: "આજના ખાસ લાભો";
+      font-size: 27px;
+      color: var(--red-light);
+      font-weight: 700;
+    }
+
+    #start-routine>p { display: none; }
+
+    .routine-product {
+      margin-top: 20px;
+      padding: 0;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, #140709 0%, #08080C 100%);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.62), inset 0 0 28px rgba(229, 9, 20, 0.1);
+      overflow: hidden;
+    }
+
+    .routine-bottle { display: none; }
+
+    .offer-stickers {
+      position: static;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      padding: 10px;
+    }
+
+    .offer-stickers span {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      min-height: 190px;
+      padding: 22px 10px 16px;
+      clip-path: none;
+      background: linear-gradient(145deg, #10080A, #060608);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      color: #FFF;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      text-shadow: 0 1px 3px #000;
+      animation: badgeFloat 3s ease-in-out infinite;
+    }
+
+    .offer-stickers span::before {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 12px;
+      border: 1px solid var(--red-accent);
+      border-radius: 50%;
+      background: #18080A;
+      font-size: 28px;
+      box-shadow: 0 0 12px var(--red-glow);
+    }
+
+    .offer-stickers span:nth-child(1)::before { content: "🚚"; }
+    .offer-stickers span:nth-child(2)::before { content: "🥗"; }
+    .offer-stickers span:nth-child(3) { display: none; }
+    .offer-stickers span:nth-child(1)::after { content: "ઝડપી હોમ ડિલિવરી"; display: block; margin-top: 10px; font-size: 12px; font-weight: 500; color: var(--muted); }
+    .offer-stickers span:nth-child(2)::after { content: "નિષ્ણાત ડાયેટ ચાર્ટ સપોર્ટ"; display: block; margin-top: 10px; font-size: 12px; font-weight: 500; color: var(--muted); }
+
+    @keyframes badgeFloat {
+      0%, 100% { transform: rotate(-2deg) translateY(0); }
+      50% { transform: rotate(2deg) translateY(-5px); }
+    }
+
+    .routine-info { display: none !important; }
+
+    /* Form Section */
+    #order-form {
+      display: block;
+    }
+
+    .form-card {
+      margin-top: 24px;
+      background: linear-gradient(160deg, #12080A 0%, #08080C 100%);
+      padding: 24px 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(229, 9, 20, 0.1);
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    .field label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-white);
+      font-size: 15px;
+    }
+
+    .field input {
+      width: 100%;
+      min-height: 50px;
+      background: #040406;
+      color: var(--text-white);
+      border: 1px solid rgba(229, 9, 20, 0.35);
+      border-radius: 10px;
+      padding: 12px 14px;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+
+    .field input:focus {
+      border-color: var(--red-accent);
+      box-shadow: 0 0 14px var(--red-glow);
+    }
+
+    .field input::placeholder {
+      color: #6C6C7D;
+      font-size: 14px;
+    }
+
+    .cta,
+    .submit {
+      width: 100%;
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--red-gradient);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 18px;
+      border: 0;
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px var(--red-glow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .cta:hover,
+    .submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(229, 9, 20, 0.6);
+    }
+
+    .submit:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .err {
+      display: none;
+      color: #FF5A6B;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .err.show {
+      display: block;
+    }
+
+    .secure {
+      text-align: center;
+      color: var(--muted);
+      font-size: 11.5px;
+      margin-top: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    /* Customer Reviews */
+    #customer-reviews {
+      background: radial-gradient(ellipse at 50% 0%, #180709 0%, var(--bg-dark) 70%);
+      padding-block: 36px;
+    }
+
+    #customer-reviews>.eyebrow,
+    #customer-reviews>h2 {
+      text-align: center;
+      display: block;
+    }
+
+    .customer-reviews-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .customer-review {
+      position: relative;
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid var(--line-subtle);
+      border-radius: 20px;
+      border-top: 3px solid var(--red-primary);
+      background: linear-gradient(145deg, #11080A 0%, #07070A 100%);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .customer-review::after {
+      content: "“";
+      position: absolute;
+      right: 14px;
+      bottom: -16px;
+      color: rgba(229, 9, 20, 0.15);
+      font-family: Georgia, serif;
+      font-size: 100px;
+      line-height: 1;
+    }
+
+    .customer-review:hover {
+      transform: translateY(-4px);
+      border-color: var(--red-accent);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.55), 0 0 20px rgba(229, 9, 20, 0.2);
+    }
+
+    .customer-portrait {
+      text-align: center;
+    }
+
+    .customer-photo {
+      width: 62px;
+      height: 62px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 2px solid var(--red-accent);
+      background: #140A0C;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      color: var(--red-accent);
+      font-size: 20px;
+    }
+
+    .customer-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .customer-city {
+      display: inline-block;
+      margin-top: -8px;
+      position: relative;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--red-gradient);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .customer-review-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .customer-review h3 {
+      font-size: 17px;
+      color: var(--text-white);
+    }
+
+    .customer-rating {
+      color: var(--red-accent);
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--red-glow);
+    }
+
+    .customer-review blockquote p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* FAQs */
+    #faqs {
+      background: var(--bg-dark);
+      padding-block: 36px;
+    }
+
+    #faqs>.eyebrow,
+    #faqs>h2 {
+      text-align: center;
+      display: block;
+    }
+
+    details {
+      border-bottom: 1px solid var(--line-subtle);
+      padding: 16px 0;
+    }
+
+    summary {
+      list-style: none;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--text-white);
+      font-size: 16px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary:after {
+      content: "+";
+      color: var(--red-accent);
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    details[open] summary:after {
+      content: "−";
+    }
+
+    details p {
+      padding-top: 10px;
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* Footer & Disclaimer */
+    .disclaimer {
+      margin: 0 3px;
+      padding: 16px 26px 4px;
+      font-size: 10px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.45);
+      background: #030304;
+      text-align: center;
+      border: 0;
+    }
+
+    .disclaimer p {
+      font-size: 9.5px;
+      line-height: 1.45;
+      margin: 0;
+      color: inherit;
+    }
+
+    .disclaimer strong {
+      display: none;
+    }
+
+    .policy-links {
+      margin: 0 3px;
+      padding: 4px 18px 14px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0 2px;
+      background: #030304;
+      font-size: 9px;
+      border: 0;
+    }
+
+    .policy-links button {
+      border: 0;
+      background: none;
+      font-size: 10px;
+      color: var(--muted);
+      padding: 3px 1px;
+      transition: color 0.2s;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .policy-links button:hover {
+      color: var(--red-accent);
+    }
+
+    .policy-links button:nth-child(5) { grid-column: 2 / 3; }
+    .policy-links button:nth-child(6) { grid-column: 3 / 4; }
+
+    /* Sticky Bottom Bar */
+    .sticky {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 115%);
+      max-width: var(--w);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px max(10px, env(safe-area-inset-bottom));
+      background: #060608;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      border-bottom: 0;
+      border-radius: 18px 18px 0 0;
+      box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.6), 0 -2px 14px rgba(229, 9, 20, 0.25);
+      z-index: 80;
+      visibility: hidden;
+      transition: transform 0.25s ease;
+    }
+
+    .sticky.show {
+      transform: translate(-50%, 0);
+      visibility: visible;
+    }
+
+    .sticky a {
+      display: flex;
+      align-items: center;
+      flex: 0 0 46%;
+      justify-content: center;
+      background: var(--red-gradient);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 12px 10px;
+      clip-path: polygon(8% 0, 100% 0, 88% 50%, 100% 100%, 8% 100%, 0 50%);
+      box-shadow: 0 4px 14px var(--red-glow);
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .sticky::before {
+      content: "🚚 સરળ COD ઉપલબ્ધ";
+      white-space: pre;
+      flex: 1;
+      color: #FFF;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .sticky a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(229, 9, 20, 0.6);
+    }
+
+    @media (max-width: 380px) {
+      section { padding-left: 14px; padding-right: 14px; }
+
+      .offer-stickers { gap: 8px; }
+      .offer-stickers span { min-height: 170px; padding: 18px 6px 12px; font-size: 13px; }
+      .offer-stickers span::before { width: 48px; height: 48px; font-size: 24px; }
+      .offer-stickers span::after { font-size: 10.5px !important; }
+
+      .quality-grid { gap: 10px; }
+      .quality-tile { padding: 10px 7px 9px; }
+      .quality-tile figcaption { font-size: 12px; }
+
+      .policy-links { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-inline: 8px; }
+      .policy-links button:nth-child(5),
+      .policy-links button:nth-child(6) { grid-column: auto; }
+
+      .sticky { gap: 6px; padding-left: 8px; padding-right: 8px; }
+      .sticky::before { font-size: 11px; }
+      .sticky a { flex-basis: 44%; font-size: 12px; padding-inline: 5px; }
+
+      .customer-review { grid-template-columns: 54px minmax(0, 1fr); gap: 10px; padding: 14px 12px; }
+      .customer-photo { width: 52px; height: 52px; }
+      .customer-review h3 { font-size: 15px; }
+      .customer-review blockquote p { font-size: 13px; }
+    }
+
+    @media (max-width: 480px) {
+      .disclaimer { margin: 0; padding: 14px 14px 4px; }
+      .disclaimer p { font-size: 8.5px; line-height: 1.45; }
+      .policy-links { margin: 0; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 4px 6px 12px; gap: 1px 2px; }
+      .policy-links button { font-size: 8px; padding: 4px 0; white-space: nowrap; }
+      .policy-links button:nth-child(5) { grid-column: 2 / 3; }
+      .policy-links button:nth-child(6) { grid-column: 3 / 4; }
+
+      .sticky { max-width: 100%; border-radius: 14px 14px 0 0; }
+      .sticky::before { font-size: 11px; }
+      .sticky a { min-height: 40px; font-size: 12px; }
+
+      .adyops-form-section { width: calc(100% - 20px) !important; max-width: none !important; }
+      .offer-stickers span { min-height: 160px; }
+      .support-card { min-height: 150px; }
+      .support-image { min-height: 150px; }
+      .support-copy { padding: 14px 12px; }
+      .support-card h3 { font-size: 16px; }
+      .support-card p { font-size: 13px; }
+    }
+
+    /* Loading overlay */
+    .loading {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(4, 4, 6, 0.92);
+      backdrop-filter: blur(8px);
+      z-index: 300;
+    }
+
+    .loading.show {
+      display: flex;
+    }
+
+    .loading-box {
+      background: #11080A;
+      border: 1px solid var(--line);
+      padding: 26px;
+      border-radius: 16px;
+      text-align: center;
+      color: var(--text-white);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+    }
+
+    .spinner {
+      width: 38px;
+      height: 38px;
+      margin: 0 auto 14px;
+      border: 3px solid rgba(229, 9, 20, 0.25);
+      border-top-color: var(--red-accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Modals & Dialogs */
+    .pp-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background: rgba(4, 4, 6, 0.92);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.25s ease;
+    }
+
+    .pp-overlay.show {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .pp-modal {
+      width: min(420px, calc(100vw - 32px));
+      max-height: 75dvh;
+      overflow-y: auto;
+      background: #0E0709;
+      border-radius: 20px;
+      padding: 22px 18px;
+      border: 1px solid var(--red-primary);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.9), 0 0 25px rgba(229, 9, 20, 0.2);
+      color: var(--text-white);
+    }
+
+    .pp-close {
+      position: sticky;
+      top: 0;
+      float: right;
+      width: 32px;
+      height: 32px;
+      border: 0;
+      border-radius: 50%;
+      background: #1C0A0D;
+      color: var(--red-accent);
+      font-size: 18px;
+    }
+
+    .pp-mtitle {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 8px;
+    }
+
+    .pp-mbadge {
+      display: inline-block;
+      background: rgba(229, 9, 20, 0.15);
+      color: var(--red-light);
+      font-size: 11px;
+      border-radius: 999px;
+      padding: 3px 10px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      border: 1px solid rgba(229, 9, 20, 0.35);
+    }
+
+    .pp-modal p,
+    .pp-modal li {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .pp-modal ul {
+      padding-left: 18px;
+      margin: 8px 0;
+    }
+
+    .pp-cgrid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .pp-citem {
+      padding: 12px 8px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #14080A;
+      text-align: center;
+    }
+
+    .pp-citem>i {
+      color: var(--red-accent);
+      font-size: 20px;
+    }
+
+    .pp-clbl {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .pp-cval {
+      color: var(--text-white);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    #order-dialog {
+      width: min(420px, calc(100% - 32px));
+      max-height: 88dvh;
+      margin: auto;
+      padding: 24px 18px;
+      border: 1px solid var(--red-primary);
+      border-radius: 20px;
+      color: var(--text-white);
+      background: #0D0709;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.95), 0 0 30px rgba(229, 9, 20, 0.25);
+      overflow-y: auto;
+    }
+
+    #order-dialog::backdrop {
+      background: rgba(4, 4, 6, 0.92);
+      backdrop-filter: blur(8px);
+    }
+
+    .order-close {
+      float: right;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: #18080A;
+      color: var(--text-white);
+      font-size: 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    #problem-section {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section id="home" class="banner hero">
+      <h1 class="sr-only">HerbalX - Relief Oil આયુર્વેદિક હર્બલ પાવડર</h1>
+      <img class="hero-banner" src="images/banner.avif" alt="HerbalX - Relief Oil આયુર્વેદિક હર્બલ પાવડર બેનર" width="941"
+        height="1671" fetchpriority="high" decoding="async" />
+    </section>
+
+    <section id="problem-roadmap" class="problem-roadmap">
+      <div class="eyebrow">સમસ્યાને સમજો</div>
+      <h2>સાંધાના દુખાવા સાથે થતી <span class="accent">તકલીફો</span></h2>
+      <div class="symptom-flow">
+        <article class="symptom-card">
+          <figure>
+            <div class="symptom-photo">
+              <i class="fa-solid fa-bone"></i>
+              <img src="images/problem1.avif" alt="ઘૂંટણમાં દુખાવો અને જકડન" loading="lazy" decoding="async"
+                onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.hidden=true" />
+            </div>
+            <figcaption>
+              <span class="symptom-node">01</span>
+              <h3>ઘૂંટણમાં દુખાવો અને જકડન</h3>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="symptom-card">
+          <figure>
+            <div class="symptom-photo">
+              <i class="fa-solid fa-cloud-sun"></i>
+              <img src="images/problem2.avif" alt="સવારે ઉઠતાં જ સાંધામાં જકડાઈ જવું" loading="lazy" decoding="async"
+                onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.hidden=true" />
+            </div>
+            <figcaption>
+              <span class="symptom-node">02</span>
+              <h3>સવારે ઉઠતાં જ સાંધામાં જકડન</h3>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="symptom-card">
+          <figure>
+            <div class="symptom-photo">
+              <i class="fa-solid fa-stairs"></i>
+              <img src="images/problem3.avif" alt="સીડી ચઢવા-ઉતરવામાં મુશ્કેલી" loading="lazy" decoding="async"
+                onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.hidden=true" />
+            </div>
+            <figcaption>
+              <span class="symptom-node">03</span>
+              <h3>સીડી ચઢવા-ઉતરવામાં મુશ્કેલી</h3>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="symptom-card">
+          <figure>
+            <div class="symptom-photo">
+              <i class="fa-solid fa-hand-fist"></i>
+              <img src="images/problem4.avif" alt="હાથ વાળવામાં દુખાવો" loading="lazy" decoding="async"
+                onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.hidden=true" />
+            </div>
+            <figcaption>
+              <span class="symptom-node">04</span>
+              <h3>હાથ વાળવામાં દુખાવો</h3>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="symptom-card">
+          <figure>
+            <div class="symptom-photo">
+              <i class="fa-solid fa-person-walking"></i>
+              <img src="images/problem5.avif" alt="ખભા ઉઠાવવામાં અસહજતા" loading="lazy" decoding="async"
+                onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.hidden=true" />
+            </div>
+            <figcaption>
+              <span class="symptom-node">05</span>
+              <h3>ખભા ઉઠાવવામાં અસહજતા</h3>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section id="product-intro" class="product">
+      <div class="eyebrow">HerbalX - Relief Oil નો પરિચય</div>
+      <h2>સાંધાની કાળજી માટે <span class="accent">Ayurvedic Support</span></h2>
+      <div class="earcare-poster">
+        <div class="earcare-orbit">
+          <div class="earcare-orbit-disc">
+            <img class="earcare-orbit-product" src="images/product.avif" alt="HerbalX - Relief Oil Ayurvedic Herbal Powder"
+              loading="lazy" decoding="async" />
+          </div>
+          <ul class="earcare-callouts" aria-label="Product features">
+            <li>
+              <span><strong>6</strong><small>Herbs</small></span>
+            </li>
+            <li>
+              <span><strong>100%</strong><small>Ayurvedic</small></span>
+            </li>
+            <li>
+              <span><strong>0</strong><small>Chemicals</small></span>
+            </li>
+          </ul>
+        </div>
+        <div class="earcare-poster-note">
+          <p>સાંધા અને સ્નાયુઓની રોજિંદી સંભાળ અને હળવી માલિશ માટે લાભદાયી.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="eyebrow">HerbalX - Relief Oil કેવી રીતે કામ કરે છે?</div>
+      <h2>સાંધાની રોજિંદી સંભાળ માટે <span class="accent">ચાર સરળ પગલાં</span></h2>
+      <div class="support-grid">
+        <article class="support-card">
+          <div class="support-image">
+            <i class="ti ti-leaf" aria-hidden="true"></i>
+            <img class="support-photo" src="images/work1.avif" alt="Natural herbal nourishment" loading="lazy"
+              decoding="async">
+          </div>
+          <div class="support-copy">
+            <h3>Natural Nourishment</h3>
+            <p>પારંપરિક આયુર્વેદિક ઔષધિઓથી બનેલું HerbalX - Relief Oil સાંધા અને સ્નાયુઓની કુદરતી સંભાળમાં મદદ કરે છે.</p>
+          </div>
+        </article>
+        <article class="support-card">
+          <div class="support-image">
+            <i class="ti ti-activity" aria-hidden="true"></i>
+            <img class="support-photo" src="images/work2.avif" alt="Everyday joint care" loading="lazy" decoding="async">
+          </div>
+          <div class="support-copy">
+            <h3>Everyday Joint Care</h3>
+            <p>સવારે ઉઠતી વખતે સાંધામાં જકડન કે લાંબો સમય બેઠા પછી થતી તકલીફમાં રાહત આપવામાં મદદરૂપ બને છે.</p>
+          </div>
+        </article>
+        <article class="support-card">
+          <div class="support-image">
+            <i class="ti ti-walk" aria-hidden="true"></i>
+            <img class="support-photo" src="images/work3.avif" alt="Mobility support" loading="lazy"
+              decoding="async">
+          </div>
+          <div class="support-copy">
+            <h3>Mobility Support</h3>
+            <p>હલનચલન, સીડી ચઢવા-ઉતરવા અને ઉઠવા-બેસવા જેવી દૈનિક પ્રવૃત્તિઓમાં સરળતા જાળવી રાખે છે.</p>
+          </div>
+        </article>
+        <article class="support-card">
+          <div class="support-image">
+            <i class="ti ti-heart" aria-hidden="true"></i>
+            <img class="support-photo" src="images/work4.avif" alt="Overall joint wellness" loading="lazy"
+              decoding="async">
+          </div>
+          <div class="support-copy">
+            <h3>Active Lifestyle Support</h3>
+            <p>સક્રિય જીવનશૈલી જાળવી રાખવા અને રોજિંદા કામકાજમાં કોઈપણ અડચણ વગર હલનચલન માટે સાંધાની સંભાળ રાખે છે.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ingredients">
+      <div class="eyebrow">મુખ્ય Herbal ઘટકો</div>
+      <h2>પસંદગીની <span class="accent">Ayurvedic Herbs</span></h2>
+      <p>HerbalX - Relief Oil માં પરંપરાગત રીતે ઉપયોગમાં લેવાતી ઉત્તમ ઔષધિઓ શામેલ છે:</p>
+      <div class="ingredient-grid">
+        <article class="herb">
+          <div class="herb-image">
+            <span class="herb-placeholder" aria-hidden="true"><i class="ti ti-leaf"></i></span>
+            <img src="images/ing1.avif" alt="Neem leaves" loading="lazy" decoding="async"
+              onerror="this.style.display='none'"
+              onload="this.style.display='block';this.previousElementSibling.hidden=true">
+          </div>
+          <h3>Neem (લીમડો)</h3>
+        </article>
+        <article class="herb">
+          <div class="herb-image">
+            <span class="herb-placeholder" aria-hidden="true"><i class="ti ti-leaf"></i></span>
+            <img src="images/ing2.avif" alt="Giloy" loading="lazy" decoding="async" onerror="this.style.display='none'"
+              onload="this.style.display='block';this.previousElementSibling.hidden=true">
+          </div>
+          <h3>Giloy (ગળો)</h3>
+        </article>
+        <article class="herb">
+          <div class="herb-image">
+            <span class="herb-placeholder" aria-hidden="true"><i class="ti ti-leaf"></i></span>
+            <img src="images/ing3.avif" alt="Brahmi leaves" loading="lazy" decoding="async"
+              onerror="this.style.display='none'"
+              onload="this.style.display='block';this.previousElementSibling.hidden=true">
+          </div>
+          <h3>Brahmi (બ્રાહ્મી)</h3>
+        </article>
+        <article class="herb">
+          <div class="herb-image">
+            <span class="herb-placeholder" aria-hidden="true"><i class="ti ti-leaf"></i></span>
+            <img src="images/ing4.avif" alt="Turmeric" loading="lazy" decoding="async"
+              onerror="this.style.display='none'"
+              onload="this.style.display='block';this.previousElementSibling.hidden=true">
+          </div>
+          <h3>Turmeric (હળદર)</h3>
+        </article>
+        <article class="herb">
+          <div class="herb-image">
+            <span class="herb-placeholder" aria-hidden="true"><i class="ti ti-leaf"></i></span>
+            <img src="images/ing5.avif" alt="Tulsi leaves" loading="lazy" decoding="async"
+              onerror="this.style.display='none'"
+              onload="this.style.display='block';this.previousElementSibling.hidden=true">
+          </div>
+          <h3>Tulsi (તુલસી)</h3>
+        </article>
+        <article class="herb">
+          <div class="herb-image">
+            <span class="herb-placeholder" aria-hidden="true"><i class="ti ti-leaf"></i></span>
+            <img src="images/ing6.avif" alt="Ashwagandha" loading="lazy" decoding="async"
+              onerror="this.style.display='none'"
+              onload="this.style.display='block';this.previousElementSibling.hidden=true">
+          </div>
+          <h3>Ashwagandha (અશ્વગંધા)</h3>
+        </article>
+      </div>
+    </section>
+
+    <section id="quality" class="quality">
+      <div class="eyebrow">ગુણવત્તા અને પારદર્શિતા</div>
+      <h2>પ્રમાણિત <span class="accent">ક્વોલિટી સ્ટાન્ડર્ડ્સ</span></h2>
+      <div class="quality-grid">
+        <figure class="quality-tile">
+          <div class="quality-art">
+            <span aria-hidden="true">GMP</span>
+            <img src="images/cert1.avif" alt="GMP Certified" loading="lazy" decoding="async" onerror="this.hidden=true"
+              onload="this.hidden=false;this.previousElementSibling.hidden=true">
+          </div>
+          <figcaption>GMP Certified</figcaption>
+        </figure>
+        <figure class="quality-tile">
+          <div class="quality-art">
+            <span aria-hidden="true">ISO</span>
+            <img src="images/cert2.avif" alt="ISO Verified" loading="lazy" decoding="async" onerror="this.hidden=true"
+              onload="this.hidden=false;this.previousElementSibling.hidden=true">
+          </div>
+          <figcaption>ISO Verified</figcaption>
+        </figure>
+        <figure class="quality-tile">
+          <div class="quality-art">
+            <span aria-hidden="true">FSSAI</span>
+            <img src="images/cert3.avif" alt="FSSAI Approved" loading="lazy" decoding="async" onerror="this.hidden=true"
+              onload="this.hidden=false;this.previousElementSibling.hidden=true">
+          </div>
+          <figcaption>FSSAI Approved</figcaption>
+        </figure>
+        <figure class="quality-tile">
+          <div class="quality-art">
+            <span aria-hidden="true">Lab Tested</span>
+            <img src="images/cert4.avif" alt="Quality Testing" loading="lazy" decoding="async"
+              onerror="this.hidden=true" onload="this.hidden=false;this.previousElementSibling.hidden=true">
+          </div>
+          <figcaption>Quality Tested</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="start-routine" class="final-cta">
+        <h2>સાંધાની Daily Wellness માટે <span class="accent">HerbalX - Relief Oil</span></h2>
+        <p><strong>HerbalX - Relief Oil આયુર્વેદિક હર્બલ પાવડર</strong></p>
+      <div class="routine-product">
+        <img class="routine-bottle" src="images/capsule.avif" alt="HerbalX - Relief Oil Herbal Powder" loading="lazy"
+          decoding="async" width="1280" height="1280" />
+        <div class="offer-stickers" aria-label="Offer highlights">
+          <span>FAST DELIVERY<br />SUPPORT</span>
+          <span>DIET CHART<br />SUPPORT</span>
+          <span>DAILY<br />CARE</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="order-form">
+      <div class="section-head">
+        <h2>HerbalX - Relief Oil વિશે <span class="accent">માહિતી મેળવો</span></h2>
+      </div>
+      <div class="form-card" id="inline-order-card">
+        <form id="orderForm" method="post"
+          action="https://script.google.com/macros/s/AKfycbxT6e4aWhK8JTf9ebsb7OQgqvkRDXd1y5QQctOOkEnERqRnfzUv_6XF30E-9ne1Jwjx/exec"
+          accept-charset="UTF-8" onsubmit="return submitForm(event);">
+          <input type="hidden" name="key" value="XQP4bdtEZkt3" />
+          <input type="hidden" name="product" value="HerbalX - Relief Oil" />
+          <input type="hidden" name="source" value="HerbalX - Relief Oil Website (Gujarati)" />
+          <input type="hidden" name="date" id="date" />
+          <input type="hidden" name="event_id" id="event_id" />
+          <input type="hidden" name="page_url" id="page_url" />
+          <input type="hidden" name="referrer" id="referrer" />
+          <input type="hidden" name="utm_source" /><input type="hidden" name="utm_medium" /><input type="hidden"
+            name="utm_campaign" />
+          <input type="hidden" name="utm_campaign_id" /><input type="hidden" name="utm_adset" /><input type="hidden"
+            name="utm_adset_id" />
+          <input type="hidden" name="utm_ad" /><input type="hidden" name="utm_ad_id" /><input type="hidden"
+            name="utm_placement" />
+          <input type="hidden" name="fbclid" /><input type="hidden" name="fbc" /><input type="hidden" name="fbp" />
+          <div class="field">
+            <label for="name">તમારું પૂરું નામ *</label>
+            <input type="text" id="name" name="name" required autocomplete="name" pattern="[A-Za-z\u0A80-\u0AFF\u0900-\u097F ]+"
+              placeholder="તમારું પૂરું નામ લખો" />
+            <div class="err" id="nameError">કૃપા કરીને પૂરું નામ લખો.</div>
+          </div>
+          <div class="field">
+            <label for="phone">મોબાઇલ નંબર *</label>
+            <input type="tel" id="phone" name="phone" maxlength="10" inputmode="numeric" autocomplete="tel"
+              pattern="[6-9][0-9]{9}" required placeholder="તમારો 10 અંકનો મોબાઇલ નંબર લખો" />
+            <div class="err" id="phoneError">
+              કૃપા કરીને માન્ય 10 અંકનો મોબાઇલ નંબર લખો.
+            </div>
+          </div>
+          <button class="submit" id="submitBtn" type="submit">
+            અત્યારે જ ઓર્ડર કરો →
+          </button>
+          <div class="secure">
+            🔒 100% સુરક્ષિત ડેટા · 📦 ફ્રી ડિલિવરી · ✅ કેશ ઓન ડિલિવરી (COD) ઉપલબ્ધ
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="customer-reviews">
+      <div class="eyebrow">ગ્રાહકોના અનુભવ</div>
+      <h2>વાસ્તવિક ગ્રાહકોના <span class="accent">પ્રતિભાવ</span></h2>
+      <div class="customer-reviews-list">
+        <article class="customer-review">
+          <div class="customer-portrait">
+            <div class="customer-photo"><span aria-hidden="true">શિ</span><img src="images/test1.avif" alt="શિવાની ચૌહાણ"
+                loading="lazy" decoding="async" onerror="this.hidden=true"
+                onload="this.hidden=false;this.previousElementSibling.hidden=true"></div>
+            <span class="customer-city">અમદાવાદ</span>
+          </div>
+          <div>
+            <header class="customer-review-header">
+              <h3>શિવાની ચૌહાણ</h3><span class="customer-rating" aria-hidden="true">★★★★★</span>
+            </header>
+            <blockquote>
+              <p>“ઘૂંટણમાં દુખાવો અને જકડનના કારણે સીડી ચઢવી મુશ્કેલ બની ગઈ હતી. HerbalX - Relief Oil નિયમિત ઉપયોગ કર્યા પછી સાંધામાં ખૂબ જ હળવાશ અને રાહત અનુભવાય છે.”</p>
+            </blockquote>
+          </div>
+        </article>
+        <article class="customer-review">
+          <div class="customer-portrait">
+            <div class="customer-photo"><span aria-hidden="true">દી</span><img src="images/test2.avif" alt="દીપક યાદવ"
+                loading="lazy" decoding="async" onerror="this.hidden=true"
+                onload="this.hidden=false;this.previousElementSibling.hidden=true"></div>
+            <span class="customer-city">સુરત</span>
+          </div>
+          <div>
+            <header class="customer-review-header">
+              <h3>દીપક યાદવ</h3><span class="customer-rating" aria-hidden="true">★★★★★</span>
+            </header>
+            <blockquote>
+              <p>“સવારે ઉઠતાં જ સાંધામાં ખૂબ જકડન રહેતી હતી. HerbalX - Relief Oil એ મને સવારની જકડાઈ જવાની સમસ્યામાં ખૂબ જ સારી રાહત આપી છે.”</p>
+            </blockquote>
+          </div>
+        </article>
+        <article class="customer-review">
+          <div class="customer-portrait">
+            <div class="customer-photo"><span aria-hidden="true">અં</span><img src="images/test3.avif" alt="અંજલિ ગુપ્તા"
+                loading="lazy" decoding="async" onerror="this.hidden=true"
+                onload="this.hidden=false;this.previousElementSibling.hidden=true"></div>
+            <span class="customer-city">વડોદરા</span>
+          </div>
+          <div>
+            <header class="customer-review-header">
+              <h3>અંજલિ ગુપ્તા</h3><span class="customer-rating" aria-hidden="true">★★★★★</span>
+            </header>
+            <blockquote>
+              <p>“પહેલાં ખભા અને હાથમાં વારંવાર દુખાવો રહેતો હતો. HerbalX - Relief Oil ને દિનચર્યામાં સામેલ કર્યા પછી મને ખૂબ જ સરસ આરામ મળ્યો છે.”</p>
+            </blockquote>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="faqs">
+      <div class="eyebrow">FAQs</div>
+      <h2>વારંવાર પૂછાતા <span class="accent">પ્રશ્નો</span></h2>
+      <details>
+        <summary>HerbalX - Relief Oil શું છે?</summary>
+        <p>HerbalX - Relief Oil એક આયુર્વેદિક હર્બલ પાવડર છે, જેમાં લીમડો, ગળો, બ્રાહ્મી, હળદર, તુલસી, અશ્વગંધા અને અન્ય પારંપરિક ઔષધિઓ સામેલ છે જે સાંધાની સંભાળ માટે અત્યંત ગુણકારી છે.</p>
+      </details>
+      <details>
+        <summary>શું HerbalX - Relief Oil સાંધાના દુખાવા અને જકડાઈ જવામાં મદદરૂપ છે?</summary>
+        <p>હા, HerbalX - Relief Oil સાંધાનો દુખાવો, સવારની જકડન અને સ્નાયુઓના તણાવમાં સામાન્ય રાહત અને સારસંભાળમાં ખૂબ જ મદદ કરે છે.</p>
+      </details>
+      <details>
+        <summary>આનો ઉપયોગ કેવી રીતે કરવો?</summary>
+        <p>પ્રોડક્ટ લેબલ પર આપેલી સૂચનાઓ મુજબ તેને તમારી દિનચર્યામાં નિયમિત સામેલ કરો.</p>
+      </details>
+      <details>
+        <summary>શું આની કોઈ આડઅસર (Side Effects) છે?</summary>
+        <p>ના, આ 100% કુદરતી આયુર્વેદિક ઘટકોથી બનેલું સુરક્ષિત ઉત્પાદન છે.</p>
+      </details>
+    </section>
+
+    <div id="disclaimer" class="disclaimer">
+      <strong>કાનૂની ડિસ્ક્લેમર</strong>
+      <p>Disclaimer: HerbalX - Relief Oil is not intended to diagnose, treat, or cure any medical condition and is not a substitute for professional medical advice. If you experience severe pain or persistent discomfort, consult a qualified physician. Please read the product label and follow the instructions provided.</p>
+    </div>
+
+    <div class="policy-links">
+      <button onclick="openModal('privacy')">Privacy Policy</button>
+      <button onclick="openModal('terms')">Terms & Conditions</button>
+      <button onclick="openModal('shipping')">Shipping</button>
+      <button onclick="openModal('cancel')">Cancellation</button>
+      <button onclick="openModal('contact')">Contact Us</button>
+      <button onclick="openModal('disclaimer')">Legal Disclaimer</button>
+    </div>
+
+    <div class="sticky" id="order-sticky">
+      <a href="#order-form">ઓર્ડર કરો</a>
+    </div>
+
+    <div class="loading" id="loading">
+      <div class="loading-box">
+        <div class="spinner"></div>
+        <p>તમારી વિનંતી મોકલાઈ રહી છે...</p>
+      </div>
+    </div>
+  </main>
+
+  <dialog id="order-dialog" aria-labelledby="order-dialog-title">
+    <button type="button" class="order-close" aria-label="Close order popup">×</button>
+    <div class="eyebrow">HERBALX - RELIEF OIL</div>
+    <h2 id="order-dialog-title">અત્યારે જ ઓર્ડર કરો</h2>
+    <div id="popup-order-card" class="form-card"></div>
+  </dialog>
+
+  <div class="pp-overlay" id="pp-overlay" onclick="closeIfOutside(event)">
+    <div class="pp-modal" id="pp-modal">
+      <button class="pp-close" onclick="closeModal()" aria-label="Close">×</button>
+      <div id="pp-content"></div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (s) => document.querySelector(s),
+      $$ = (s) => [...document.querySelectorAll(s)];
+
+    const stickyOrder = $("#order-sticky");
+    const bannerSection = $(".banner");
+    const problemSection = $("#problem-roadmap");
+    const orderFormSection = $("#order-form");
+    let stickyFrame = 0;
+
+    function isInViewport(element) {
+      if (!element) return false;
+      const rect = element.getBoundingClientRect();
+      return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+
+    function updateStickyOrder() {
+      stickyFrame = 0;
+      if (!stickyOrder) return;
+
+      const problemStarted =
+        problemSection &&
+        problemSection.getBoundingClientRect().top < window.innerHeight;
+      const hideOnBanner = isInViewport(bannerSection) && !problemStarted;
+      const hideOnOrderForm = isInViewport(orderFormSection);
+
+      stickyOrder.classList.toggle(
+        "show",
+        !(hideOnBanner || hideOnOrderForm),
+      );
+    }
+
+    function scheduleStickyUpdate() {
+      if (!stickyFrame)
+        stickyFrame = requestAnimationFrame(updateStickyOrder);
+    }
+
+    window.addEventListener("scroll", scheduleStickyUpdate, { passive: true });
+    window.addEventListener("resize", scheduleStickyUpdate);
+    updateStickyOrder();
+
+    const UTM_KEYS = [
+      "utm_source", "utm_medium", "utm_campaign", "utm_campaign_id",
+      "utm_adset", "utm_adset_id", "utm_ad", "utm_ad_id", "utm_placement",
+    ];
+
+    function setHidden(n, v) {
+      const i = document.querySelector('#orderForm input[name="' + n + '"]');
+      if (i) i.value = v || "";
+    }
+
+    function cookie(n) {
+      const m = document.cookie.match(new RegExp("(?:^|;\\s*)" + n + "=([^;]*)"));
+      return m ? decodeURIComponent(m[1]) : "";
+    }
+
+    function savedValue(k) {
+      try {
+        return sessionStorage.getItem(k) || "";
+      } catch (_) {
+        return "";
+      }
+    }
+
+    function capture() {
+      const p = new URLSearchParams(location.search);
+      UTM_KEYS.forEach((k) => setHidden(k, p.get(k) || savedValue(k)));
+      UTM_KEYS.forEach((k) => {
+        if (p.get(k)) {
+          try {
+            sessionStorage.setItem(k, p.get(k));
+          } catch (_) { }
+        }
+      });
+      const fbclid = p.get("fbclid") || "";
+      setHidden("fbclid", fbclid);
+      setHidden(
+        "fbc",
+        cookie("_fbc") || (fbclid ? "fb.1." + Date.now() + "." + fbclid : ""),
+      );
+      setHidden("fbp", cookie("_fbp"));
+    }
+    capture();
+
+    const nameInput = $("#name");
+    const phoneInput = $("#phone");
+
+    nameInput?.addEventListener("input", () => {
+      nameInput.value = nameInput.value
+        .replace(/[^A-Za-z\u0A80-\u0AFF\u0900-\u097F ]/g, "")
+        .replace(/\s{2,}/g, " ")
+        .replace(/^\s+/, "");
+      err("nameError", false);
+    });
+
+    phoneInput?.addEventListener("input", () => {
+      let value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
+      if (value && !/^[6-9]/.test(value)) value = value.slice(1);
+      phoneInput.value = value;
+      err("phoneError", false);
+    });
+
+    function validName(v) {
+      return /^[A-Za-z\u0A80-\u0AFF\u0900-\u097F]+(?: [A-Za-z\u0A80-\u0AFF\u0900-\u097F]+)+$/.test(v.trim());
+    }
+
+    function validPhone(v) {
+      return /^[6-9][0-9]{9}$/.test(v);
+    }
+
+    function err(id, on) {
+      document.getElementById(id)?.classList.toggle("show", on);
+    }
+
+    function eventId() {
+      return globalThis.crypto?.randomUUID
+        ? globalThis.crypto.randomUUID()
+        : "evt-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+    }
+
+    const FORM_ENDPOINT =
+      "https://script.google.com/macros/s/AKfycbxT6e4aWhK8JTf9ebsb7OQgqvkRDXd1y5QQctOOkEnERqRnfzUv_6XF30E-9ne1Jwjx/exec";
+    const THANK_YOU_PAGE = "./Thankyou.html";
+    let formSubmitting = false;
+
+    async function submitForm(e) {
+      e.preventDefault();
+      if (formSubmitting) return false;
+
+      const form = document.getElementById("orderForm");
+      const submitBtn = document.getElementById("submitBtn");
+      const loading = document.getElementById("loading");
+      const name = nameInput.value.trim().replace(/\s+/g, " ");
+      const phone = phoneInput.value.replace(/\D/g, "");
+      const nameOk = validName(name);
+      const phoneOk = validPhone(phone);
+
+      err("nameError", !nameOk);
+      err("phoneError", !phoneOk);
+      if (!nameOk || !phoneOk) return false;
+
+      nameInput.value = name;
+      phoneInput.value = phone;
+      capture();
+      setHidden(
+        "date",
+        new Intl.DateTimeFormat("en-IN", {
+          timeZone: "Asia/Kolkata",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        }).format(new Date()),
+      );
+      setHidden("event_id", eventId());
+      setHidden("page_url", location.href);
+      setHidden("referrer", document.referrer);
+
+      formSubmitting = true;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "સબમિટ થઈ રહ્યું છે...";
+      loading?.classList.add("show");
+      document.getElementById("order-dialog")?.close();
+
+      try {
+        const payload = new URLSearchParams();
+        new FormData(form).forEach((value, key) => payload.append(key, value));
+
+        await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+          },
+          body: payload.toString(),
+          keepalive: true,
+        });
+        window.location.assign(THANK_YOU_PAGE);
+      } catch (error) {
+        formSubmitting = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = "અત્યારે જ ઓર્ડર કરો →";
+        loading?.classList.remove("show");
+        alert("ડેટા મોકલી શકાયો નથી. કૃપા કરીને ફરી પ્રયાસ કરો.");
+      }
+      return false;
+    }
+    window.submitForm = submitForm;
+
+    const contents = {
+      privacy: `<div class="pp-mtitle"><i class="ti ti-shield-lock"></i> Privacy Policy</div><div class="pp-mbadge">Secure & Encrypted</div><p>HerbalX - Relief Oil gives the highest priority to protecting your personal information. Your name, phone number, and address collected during an order are used only for order delivery. Your data is not shared with any third party.</p>`,
+      terms: `<div class="pp-mtitle"><i class="ti ti-file-description"></i> Terms & Conditions</div><div class="pp-mbadge">Terms and Conditions</div><p>This product is an Ayurvedic health supplement. Results may vary depending on individual body constitution. It is not a medical drug but is intended to support everyday wellness.</p>`,
+      shipping: `<div class="pp-mtitle"><i class="ti ti-truck-delivery"></i> Shipping Policy</div><div class="pp-mbadge">Free Delivery Across India</div><p>We provide safe and fast delivery across India within 3–7 business days. Tracking updates are sent after the order has been dispatched.</p>`,
+      cancel: `<div class="pp-mtitle"><i class="ti ti-refresh"></i> Cancellation Policy</div><div class="pp-mbadge">Easy Return Policy</div><p>You can easily cancel your order before it is dispatched. If the product arrives damaged, a return is available within 7 days.</p>`,
+      contact: `<div class="pp-mtitle"><i class="ti ti-headset"></i> Contact Us</div><p>The HerbalX - Relief Oil support team is available Monday to Saturday, from 9:00 AM to 6:00 PM.</p><div class="pp-cgrid"><div class="pp-citem"><i class="ti ti-phone"></i><div class="pp-clbl">Call / WhatsApp</div><div class="pp-cval">+91 88606 06078</div></div><div class="pp-citem"><i class="ti ti-mail"></i><div class="pp-clbl">Email</div><div class="pp-cval">support@ssherbalindia.com</div></div><div class="pp-citem"><i class="ti ti-clock"></i><div class="pp-clbl">Response Time</div><div class="pp-cval">Within 24 hours</div></div></div>`,
+      disclaimer: `<div class="pp-mtitle">Legal Disclaimer</div><div class="pp-mbadge">Important Notice</div><p>HerbalX - Relief Oil is a natural wellness supplement. It is not intended to treat or cure any serious disease. If you are pregnant or have a serious medical condition, consult your doctor.</p>`,
+    };
+
+    function openModal(k) {
+      if (!contents[k]) return;
+      $("#pp-content").innerHTML = contents[k];
+      $("#pp-overlay").classList.add("show");
+      $("#pp-modal").scrollTo(0, 0);
+    }
+    function closeModal() {
+      $("#pp-overlay").classList.remove("show");
+    }
+    function closeIfOutside(e) {
+      if (e.target === $("#pp-overlay")) closeModal();
+    }
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal();
+    });
+
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+    window.closeIfOutside = closeIfOutside;
+  </script>
+  <script>
+    (() => {
+      const dialog = document.getElementById("order-dialog"),
+        form = document.getElementById("orderForm"),
+        home = document.getElementById("inline-order-card");
+      let trigger;
+      document.querySelectorAll("[data-order-popup]").forEach((button) =>
+        button.addEventListener("click", (event) => {
+          if (typeof dialog.showModal !== "function") return;
+          event.preventDefault();
+          trigger = button;
+          document.getElementById("popup-order-card").appendChild(form);
+          dialog.showModal();
+          document.body.classList.add("order-popup-open");
+          document.getElementById("name").focus();
+        }),
+      );
+      dialog
+        .querySelector(".order-close")
+        .addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => {
+        const r = dialog.getBoundingClientRect();
+        if (
+          event.target === dialog &&
+          (event.clientX < r.left ||
+            event.clientX > r.right ||
+            event.clientY < r.top ||
+            event.clientY > r.bottom)
+        )
+          dialog.close();
+      });
+      dialog.addEventListener("close", () => {
+        home.appendChild(form);
+        document.body.classList.remove("order-popup-open");
+        trigger?.focus({ preventScroll: true });
+        scheduleStickyUpdate();
+      });
+    })();
+  </script>
+</body>
+
+</html>

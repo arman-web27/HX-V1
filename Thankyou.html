@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="gu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=5"
+    />
+    <meta name="theme-color" content="#040406" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>આભાર — HerbalX - Relief Oil આયુર્વેદિક હર્બલ પાવડર</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-dark: #040406;
+        --bg-card: #0D0D11;
+        --bg-card-alt: #14141A;
+        --text-white: #FFFFFF;
+        --muted: #A3A3B3;
+        --red-accent: #FF334B;
+        --red-light: #FF6678;
+        --red-primary: #E50914;
+        --red-dark: #991B1B;
+        --red-glow: rgba(229, 9, 20, 0.45);
+        --red-gradient: linear-gradient(135deg, #FF4D61 0%, #E50914 45%, #B91C1C 80%, #7F1D1D 100%);
+        --line: rgba(229, 9, 20, 0.25);
+        --line-subtle: rgba(255, 255, 255, 0.08);
+        --surface: #10080A;
+        --max: 450px;
+        color-scheme: dark;
+
+        --type-display: clamp(2rem, 1.4rem + 3vw, 2.25rem);
+        --type-heading: clamp(1.625rem, 1rem + 3vw, 1.875rem);
+        --type-subheading: clamp(1.125rem, .8rem + 1.5vw, 1.25rem);
+        --type-body: 1rem;
+        --type-small: .875rem;
+        --type-label: .8125rem;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { -webkit-text-size-adjust: 100%; background: var(--bg-dark); }
+      body {
+        min-height: 100vh;
+        background: var(--bg-dark);
+        color: var(--text-white);
+        font-family: 'Noto Sans Gujarati', 'Mukta Vaani', sans-serif;
+        font-size: var(--type-body);
+        line-height: 1.7;
+      }
+      .page {
+        width: 100%; max-width: var(--max); min-height: 100vh;
+        margin: auto; overflow: hidden;
+        border-inline: 1px solid var(--line);
+        background: var(--bg-dark);
+        box-shadow: 0 0 70px rgba(0, 0, 0, 0.98), 0 0 30px rgba(229, 9, 20, 0.08);
+      }
+      .hero {
+        position: relative; overflow: hidden;
+        padding: 40px 24px 32px; text-align: center;
+        border-bottom: 1px solid var(--line-subtle);
+        background: radial-gradient(circle at 50% 0%, #1A0709 0%, var(--bg-dark) 75%);
+      }
+      .hero::after {
+        content: ''; position: absolute; right: -85px; bottom: -100px;
+        width: 190px; height: 190px; border-radius: 50%;
+        border: 1px solid rgba(229, 9, 20, 0.2);
+        box-shadow: 0 0 40px rgba(229, 9, 20, 0.15);
+        pointer-events: none;
+      }
+      .hero > * { position: relative; z-index: 1; }
+      .success-icon {
+        display: grid; place-items: center; width: 78px; height: 78px;
+        margin: 0 auto 22px; border: 1.5px solid var(--red-accent);
+        border-radius: 50%;
+        background: radial-gradient(circle, #22080A, #0D0709);
+        color: var(--red-accent);
+        box-shadow: 0 0 24px var(--red-glow);
+        animation: arrive .45s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .success-icon svg { width: 38px; height: 38px; }
+      .eyebrow {
+        display: inline-flex; align-items: center; gap: 8px;
+        margin-bottom: 12px; color: var(--red-accent);
+        font-size: 15px; font-weight: 700; letter-spacing: 1.5px;
+        text-transform: uppercase;
+        text-shadow: 0 0 14px var(--red-glow);
+      }
+      .eyebrow::before {
+        content: ''; width: 20px; height: 2px;
+        background: var(--red-accent);
+        box-shadow: 0 0 8px var(--red-accent);
+      }
+      h1, h2 { font-weight: 700; line-height: 1.3; color: var(--text-white); }
+      .hero h1 { font-size: 26px; margin-bottom: 14px; letter-spacing: -0.4px; }
+      .hero h1 span {
+        display: block; color: var(--red-accent);
+        margin-bottom: 8px; font-size: 36px;
+        text-shadow: 0 0 20px rgba(255, 51, 75, 0.45);
+      }
+      p { color: var(--muted); }
+      .hero p { font-size: 15px; line-height: 1.65; }
+      
+      .content { padding: 28px 20px 38px; }
+      
+      .product {
+        overflow: hidden; border: 1px solid var(--line); border-radius: 20px;
+        background: linear-gradient(180deg, #12080A 0%, #07070A 100%);
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.7), inset 0 0 24px rgba(229, 9, 20, 0.1);
+      }
+      .product-image {
+        position: relative; display: grid; place-items: center;
+        aspect-ratio: 1; padding: 20px;
+        background: radial-gradient(circle at 50% 35%, #1A080A, #0A0A0E);
+      }
+      .product-image img {
+        position: absolute; inset: 20px;
+        width: calc(100% - 40px); height: calc(100% - 40px);
+        object-fit: contain; border-radius: 12px;
+        filter: drop-shadow(0 14px 20px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 16px rgba(229, 9, 20, 0.25));
+      }
+      .product-fallback { display: grid; justify-items: center; gap: 12px; text-align: center; }
+      .product-fallback[hidden] { display: none; }
+      .product-fallback svg { width: 68px; height: 68px; color: var(--red-accent); }
+      .product-fallback strong { font-size: 34px; letter-spacing: -1px; color: var(--text-white); }
+      .product-fallback strong span, .product-info h2 span { color: var(--red-accent); }
+      .product-fallback small { color: var(--muted); font-size: 13px; }
+      .product-info { padding: 18px; text-align: center; border-top: 1px solid var(--line-subtle); }
+      .product-info h2 { font-size: 26px; letter-spacing: -0.5px; }
+      .product-info p { margin-top: 4px; font-size: 14px; color: var(--muted); }
+      
+      .section-heading {
+        font-size: 22px; margin: 30px 0 18px;
+        text-align: center; color: var(--text-white);
+      }
+      .steps { display: grid; gap: 12px; margin-bottom: 22px; }
+      .step {
+        display: grid; grid-template-columns: 42px minmax(0, 1fr); align-items: center;
+        gap: 14px; padding: 16px; border: 1px solid var(--line-subtle); border-radius: 14px;
+        background: linear-gradient(145deg, #12080A, #08080C);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      }
+      .number {
+        display: grid; place-items: center; width: 42px; height: 42px;
+        border: 1px solid rgba(229, 9, 20, 0.35); border-radius: 12px;
+        background: rgba(229, 9, 20, 0.18); color: var(--red-accent);
+        font-size: 18px; font-weight: 800;
+        box-shadow: 0 0 12px rgba(229, 9, 20, 0.25);
+      }
+      .step p { font-size: 14.5px; color: var(--text-white); line-height: 1.55; }
+      
+      .secure {
+        padding: 15px 18px; border-left: 3px solid var(--red-accent);
+        border-radius: 0 12px 12px 0; background: #0E0709;
+        color: var(--muted); font-size: 13.5px;
+        border-block: 1px solid var(--line-subtle); border-right: 1px solid var(--line-subtle);
+      }
+      .secure svg {
+        width: 19px; height: 19px; margin-right: 8px;
+        vertical-align: middle; color: var(--red-accent);
+      }
+
+      .home {
+        display: flex; align-items: center; justify-content: center; gap: 10px;
+        min-height: 52px; margin-top: 24px; padding: 14px 20px;
+        border: 0; border-radius: 12px;
+        background: var(--red-gradient);
+        color: #FFFFFF; font-weight: 800; text-decoration: none; text-align: center;
+        font-size: 16px;
+        box-shadow: 0 8px 24px var(--red-glow);
+        transition: transform .2s ease, box-shadow .2s ease;
+        letter-spacing: 0.3px;
+      }
+      .home svg { width: 20px; height: 20px; flex-shrink: 0; }
+      .home:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(229, 9, 20, 0.6);
+        color: #FFFFFF;
+      }
+      .home:focus-visible { outline: 2px solid var(--red-accent); outline-offset: 4px; }
+      
+      .footer {
+        padding: 24px 20px; border-top: 1px solid var(--line-subtle);
+        text-align: center; color: #7A7A8E; font-size: 12px;
+        background: #030304;
+      }
+      .footer strong { color: var(--red-accent); font-size: 17px; }
+
+      @keyframes arrive {
+        from { opacity: 0; transform: scale(.8); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      @media (max-width: 360px) {
+        .hero { padding: 32px 16px; }
+        .hero h1 { font-size: 24px; }
+        .hero h1 span { font-size: 30px; }
+        .content { padding: 22px 16px 30px; }
+        .step { padding: 14px; gap: 10px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .success-icon { animation: none; }
+        .home { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>
+        </div>
+        <div class="eyebrow">માહિતી પ્રાપ્ત થઈ</div>
+        <h1><span>આભાર!</span>તમારી માહિતી સફળતાપૂર્વક મળી ગઈ છે</h1>
+        <p>
+          અમારી ટીમ ટૂંક સમયમાં તમારો સંપર્ક કરશે અને HerbalX - Relief Oil ઓર્ડર, COD તેમજ માર્ગદર્શન અંગેની આગળની તમામ માહિતી આપશે.
+        </p>
+      </section>
+
+      <section class="content">
+        <article class="product">
+          <div class="product-image">
+            <div class="product-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19C1 8 12 4 21 3c0 9-3 18-13 16M4 22 17 8m-7 8v-5m0 5h5"/></svg>
+              <strong>Relief<span>Pro</span></strong>
+              <small>Daily Joint Wellness Routine</small>
+            </div>
+            <img
+              src="images/product.avif"
+              alt="HerbalX - Relief Oil Ayurvedic Herbal Powder"
+              loading="lazy"
+              onload="this.previousElementSibling.hidden = true"
+              onerror="this.hidden = true"
+            />
+          </div>
+          <div class="product-info">
+            <h2>Relief<span>Pro</span></h2>
+            <p>Ayurvedic Herbal Powder</p>
+          </div>
+        </article>
+
+        <h2 class="section-heading">હવે આગળ શું થશે?</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="number">01</span>
+            <p>તમારી વિગતો અમારી ટીમ સુધી સુરક્ષિત રીતે પહોંચી ગઈ છે.</p>
+          </div>
+          <div class="step">
+            <span class="number">02</span>
+            <p>અમારી વેરિફિકેશન ટીમ ટૂંક સમયમાં તમને ફોન કરશે.</p>
+          </div>
+          <div class="step">
+            <span class="number">03</span>
+            <p>ઑફર, COD અને ડિલિવરી સંબંધિત તમામ વિગતો શેર કરવામાં આવશે.</p>
+          </div>
+        </div>
+
+        <div class="secure">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6Z"/><path d="m8 12 3 3 5-6"/></svg>તમારી માહિતી 100% સુરક્ષિત અને ગુપ્ત રાખવામાં આવશે
+        </div>
+
+        <a class="home" href="./index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+          મુખ્ય પેજ પર પાછા જાઓ
+        </a>
+      </section>
+
+      <footer class="footer">
+        <strong>HerbalX - Relief Oil</strong><br />પસંદગીની આયુર્વેદિક ઔષધિઓ · 100% ક્વોલિટી એશ્યોર્ડ · Everyday Wellness Routine
+      </footer>
+    </main>
+  </body>
+</html>
