@@ -339,10 +339,16 @@
 
     .earcare-callouts>li:nth-child(-n+3) .earcare-callout-icon,
     .earcare-callouts>li:nth-child(-n+3) small { display: none; }
-    .earcare-callouts>li:nth-child(-n+3) strong { font-size: 0; }
+    .earcare-callouts>li:nth-child(-n+3) strong {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      font-size: 0;
+      line-height: 1;
+    }
     .earcare-callouts>li:nth-child(-n+3) strong::before,
     .earcare-callouts>li:nth-child(-n+3) strong::after { display: block; line-height: 1.2; }
-    .earcare-callouts>li:nth-child(-n+3) strong::before { color: var(--red-primary); font-size: 28px; margin-bottom: 6px; font-weight: 800; }
+    .earcare-callouts>li:nth-child(-n+3) strong::before { color: var(--red-primary); font-size: 28px; margin-bottom: 0; font-weight: 800; }
     .earcare-callouts>li:nth-child(-n+3) strong::after { color: var(--text-black); font-size: 14px; font-weight: 700; }
     
     .earcare-callouts>li:nth-child(1) strong::before { content: "6"; }
