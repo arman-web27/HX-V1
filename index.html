@@ -337,26 +337,23 @@
     .earcare-callouts>li:nth-child(2) { grid-column: 2 / 3; }
     .earcare-callouts>li:nth-child(3) { grid-column: 3 / 4; }
 
-    .earcare-callouts>li:nth-child(-n+3) .earcare-callout-icon,
-    .earcare-callouts>li:nth-child(-n+3) small { display: none; }
+    .earcare-callouts>li:nth-child(-n+3) .earcare-callout-icon { display: none; }
     .earcare-callouts>li:nth-child(-n+3) strong {
       display: flex;
       flex-direction: column;
       gap: 0;
-      font-size: 0;
+      color: var(--red-primary);
+      font-size: 28px;
+      font-weight: 800;
       line-height: 1;
     }
-    .earcare-callouts>li:nth-child(-n+3) strong::before,
-    .earcare-callouts>li:nth-child(-n+3) strong::after { display: block; line-height: 1.2; }
-    .earcare-callouts>li:nth-child(-n+3) strong::before { color: var(--red-primary); font-size: 28px; margin-bottom: 0; font-weight: 800; }
-    .earcare-callouts>li:nth-child(-n+3) strong::after { color: var(--text-black); font-size: 14px; font-weight: 700; }
-    
-    .earcare-callouts>li:nth-child(1) strong::before { content: "6"; }
-    .earcare-callouts>li:nth-child(1) strong::after { content: "ઔષધિઓ"; }
-    .earcare-callouts>li:nth-child(2) strong::before { content: "100%"; }
-    .earcare-callouts>li:nth-child(2) strong::after { content: "આયુર્વેદિક"; }
-    .earcare-callouts>li:nth-child(3) strong::before { content: "0"; }
-    .earcare-callouts>li:nth-child(3) strong::after { content: "કેમિકલ્સ"; }
+    .earcare-callouts>li:nth-child(-n+3) small {
+      display: block;
+      color: var(--text-black);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
     .earcare-callouts>li:nth-child(4) { display: none; }
     .earcare-callouts>.proof-pill { display: none !important; }
 
@@ -617,8 +614,7 @@
       text-align: center;
     }
 
-    #start-routine::after {
-      content: "સાંધાની રોજિંદી સંભાળ આજે જ શરૂ કરો";
+    .routine-note {
       display: block;
       max-width: 390px;
       margin: 18px auto 0;
@@ -636,15 +632,8 @@
     #start-routine>h2 {
       max-width: 360px;
       margin: 6px auto 0;
-      font-size: 0;
-      line-height: 1.25;
-    }
-
-    #start-routine>h2::after {
-      content: "આજના ખાસ લાભો";
       font-size: 26px;
-      color: var(--text-black);
-      font-weight: 800;
+      line-height: 1.25;
     }
 
     #start-routine>p { display: none; }
@@ -699,11 +688,23 @@
       font-size: 24px;
     }
 
-    .offer-stickers span:nth-child(1)::before { content: "🚚"; }
-    .offer-stickers span:nth-child(2)::before { content: "🥗"; }
+    .offer-stickers span:nth-child(1)::before,
+    .offer-stickers span:nth-child(2)::before { content: none; }
+    .offer-stickers i {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 10px;
+      border: 1px solid rgba(220, 38, 38, 0.2);
+      border-radius: 50%;
+      background: #FFF1F2;
+      color: var(--red-primary);
+      font-size: 24px;
+      font-style: normal;
+    }
     .offer-stickers span:nth-child(3) { display: none; }
-    .offer-stickers span:nth-child(1)::after { content: "ઝડપી હોમ ડિલિવરી"; display: block; margin-top: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
-    .offer-stickers span:nth-child(2)::after { content: "નિષ્ણાત ડાયેટ ચાર્ટ સપોર્ટ"; display: block; margin-top: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
+    .offer-stickers small { display: block; margin-top: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
 
     @keyframes badgeFloat {
       0%, 100% { transform: translateY(0); }
@@ -852,17 +853,6 @@
       transition: all 0.25s ease;
     }
 
-    .customer-review::after {
-      content: "“";
-      position: absolute;
-      right: 14px;
-      bottom: -20px;
-      color: rgba(220, 38, 38, 0.08);
-      font-family: Georgia, serif;
-      font-size: 90px;
-      line-height: 1;
-    }
-
     .customer-review:hover {
       transform: translateY(-3px);
       border-color: var(--line);
@@ -967,17 +957,16 @@
       display: none;
     }
 
-    summary:after {
-      content: "+";
+    summary .faq-toggle {
       color: var(--red-primary);
       font-size: 20px;
       line-height: 1;
       font-weight: 800;
     }
 
-    details[open] summary:after {
-      content: "−";
-    }
+    details[open] summary .faq-toggle { display: none; }
+    details[open] summary .faq-toggle-open { display: inline; }
+    summary .faq-toggle-open { display: none; }
 
     details p {
       padding-top: 8px;
@@ -1077,13 +1066,19 @@
       transition: transform 0.2s ease;
     }
 
-    .sticky::before {
-      content: "🚚 સરળ COD ઉપલબ્ધ";
+    .sticky-note {
       white-space: pre;
       flex: 1;
       color: var(--text-black);
       font-size: 13.5px;
       font-weight: 700;
+    }
+
+    .sticky-note i {
+      margin-right: 4px;
+      color: var(--red-primary);
+      font-size: 16px;
+      vertical-align: -2px;
     }
 
     .sticky a:hover {
@@ -1378,13 +1373,13 @@
           </div>
           <ul class="earcare-callouts" aria-label="Product features">
             <li>
-              <span><strong>6</strong><small>Herbs</small></span>
+              <span><strong>6</strong><small>ઔષધિઓ</small></span>
             </li>
             <li>
-              <span><strong>100%</strong><small>Ayurvedic</small></span>
+              <span><strong>100%</strong><small>આયુર્વેદિક</small></span>
             </li>
             <li>
-              <span><strong>0</strong><small>Chemicals</small></span>
+              <span><strong>0</strong><small>કેમિકલ્સ</small></span>
             </li>
           </ul>
         </div>
@@ -1545,15 +1540,16 @@
     </section>
 
     <section id="start-routine" class="final-cta">
-        <h2>સાંધાની Daily Wellness માટે <span class="accent">HerbeX - Relief Oil</span></h2>
+        <h2>આજના ખાસ લાભો</h2>
       <div class="routine-product">
         <img class="routine-bottle" src="images/capsule.avif" alt="HerbeX - Relief Oil Herbal Powder" loading="lazy"
           decoding="async" width="1280" height="1280" />
         <div class="offer-stickers" aria-label="Offer highlights">
-          <span>FAST DELIVERY<br />SUPPORT</span>
-          <span>DIET CHART<br />SUPPORT</span>
+          <span><i class="ti ti-truck-delivery" aria-hidden="true"></i>FAST DELIVERY<br />SUPPORT<br /><small>ઝડપી હોમ ડિલિવરી</small></span>
+          <span><i class="ti ti-leaf" aria-hidden="true"></i>DIET CHART<br />SUPPORT<br /><small>નિષ્ણાત ડાયેટ ચાર્ટ સપોર્ટ</small></span>
         </div>
       </div>
+      <div class="routine-note">સાંધાની રોજિંદી સંભાળ આજે જ શરૂ કરો</div>
     </section>
 
     <section id="order-form">
@@ -1661,19 +1657,19 @@
       <div class="eyebrow">FAQs</div>
       <h2>વારંવાર પૂછાતા <span class="accent">પ્રશ્નો</span></h2>
       <details>
-        <summary>HerbeX - Relief Oil શું છે?</summary>
+        <summary>HerbeX - Relief Oil શું છે? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span></summary>
         <p>HerbeX - Relief Oil એક આયુર્વેદિક હર્બલ પાવડર છે, જેમાં લીમડો, ગળો, બ્રાહ્મી, હળદર, તુલસી, અશ્વગંધા અને અન્ય પારંપરિક ઔષધિઓ સામેલ છે જે સાંધાની સંભાળ માટે અત્યંત ગુણકારી છે.</p>
       </details>
       <details>
-        <summary>શું HerbeX - Relief Oil સાંધાના દુખાવા અને જકડાઈ જવામાં મદદરૂપ છે?</summary>
+        <summary>શું HerbeX - Relief Oil સાંધાના દુખાવા અને જકડાઈ જવામાં મદદરૂપ છે? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span></summary>
         <p>હા, HerbeX - Relief Oil સાંધાનો દુખાવો, સવારની જકડન અને સ્નાયુઓના તણાવમાં સામાન્ય રાહત અને સારસંભાળમાં ખૂબ જ મદદ કરે છે.</p>
       </details>
       <details>
-        <summary>આનો ઉપયોગ કેવી રીતે કરવો?</summary>
+        <summary>આનો ઉપયોગ કેવી રીતે કરવો? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span></summary>
         <p>પ્રોડક્ટ લેબલ પર આપેલી સૂચનાઓ મુજબ તેને તમારી દિનચર્યામાં નિયમિત સામેલ કરો.</p>
       </details>
       <details>
-        <summary>શું આની કોઈ આડઅસર (Side Effects) છે?</summary>
+        <summary>શું આની કોઈ આડઅસર (Side Effects) છે? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span></summary>
         <p>ના, આ 100% કુદરતી આયુર્વેદિક ઘટકોથી બનેલું સુરક્ષિત ઉત્પાદન છે.</p>
       </details>
     </section>
@@ -1692,6 +1688,7 @@
     </div>
 
     <div class="sticky" id="order-sticky">
+      <span class="sticky-note"><i class="ti ti-truck-delivery" aria-hidden="true"></i> સરળ COD ઉપલબ્ધ</span>
       <a href="#order-form">ઓર્ડર કરો</a>
     </div>
 
