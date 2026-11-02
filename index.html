@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <meta name="theme-color" content="#FFFFFF" />
-  <title>HerbeX - Relief Oil — આયુર્વેદિક હર્બલ પાવડર</title>
+  <title>Herbex - Relief Oil — આયુર્વેદિક હર્બલ પાવડર</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -333,11 +334,22 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .earcare-callouts>li:nth-child(1) { grid-column: 1 / 2; }
-    .earcare-callouts>li:nth-child(2) { grid-column: 2 / 3; }
-    .earcare-callouts>li:nth-child(3) { grid-column: 3 / 4; }
+    .earcare-callouts>li:nth-child(1) {
+      grid-column: 1 / 2;
+    }
 
-    .earcare-callouts>li:nth-child(-n+3) .earcare-callout-icon { display: none; }
+    .earcare-callouts>li:nth-child(2) {
+      grid-column: 2 / 3;
+    }
+
+    .earcare-callouts>li:nth-child(3) {
+      grid-column: 3 / 4;
+    }
+
+    .earcare-callouts>li:nth-child(-n+3) .earcare-callout-icon {
+      display: none;
+    }
+
     .earcare-callouts>li:nth-child(-n+3) strong {
       display: flex;
       flex-direction: column;
@@ -347,6 +359,7 @@
       font-weight: 800;
       line-height: 1;
     }
+
     .earcare-callouts>li:nth-child(-n+3) small {
       display: block;
       color: var(--text-black);
@@ -354,8 +367,14 @@
       font-weight: 700;
       line-height: 1.2;
     }
-    .earcare-callouts>li:nth-child(4) { display: none; }
-    .earcare-callouts>.proof-pill { display: none !important; }
+
+    .earcare-callouts>li:nth-child(4) {
+      display: none;
+    }
+
+    .earcare-callouts>.proof-pill {
+      display: none !important;
+    }
 
     .earcare-poster-note {
       margin: 20px 10px 0;
@@ -420,7 +439,9 @@
       overflow: hidden;
     }
 
-    .support-image>i { display: none; }
+    .support-image>i {
+      display: none;
+    }
 
     .support-photo {
       position: absolute;
@@ -636,7 +657,9 @@
       line-height: 1.25;
     }
 
-    #start-routine>p { display: none; }
+    #start-routine>p {
+      display: none;
+    }
 
     .routine-product {
       margin-top: 18px;
@@ -648,7 +671,9 @@
       overflow: hidden;
     }
 
-    .routine-bottle { display: none; }
+    .routine-bottle {
+      display: none;
+    }
 
     .offer-stickers {
       display: grid;
@@ -689,7 +714,10 @@
     }
 
     .offer-stickers span:nth-child(1)::before,
-    .offer-stickers span:nth-child(2)::before { content: none; }
+    .offer-stickers span:nth-child(2)::before {
+      content: none;
+    }
+
     .offer-stickers i {
       display: grid;
       place-items: center;
@@ -703,12 +731,29 @@
       font-size: 24px;
       font-style: normal;
     }
-    .offer-stickers span:nth-child(3) { display: none; }
-    .offer-stickers small { display: block; margin-top: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
+
+    .offer-stickers span:nth-child(3) {
+      display: none;
+    }
+
+    .offer-stickers small {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+    }
 
     @keyframes badgeFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
     }
 
     /* Form Section */
@@ -742,7 +787,8 @@
       font-size: 16px;
     }
 
-    .field input {
+    .field input,
+    .field textarea {
       width: 100%;
       min-height: 50px;
       background: #F8FAFC;
@@ -755,13 +801,21 @@
       transition: all 0.25s ease;
     }
 
-    .field input:focus {
+    .field textarea {
+      resize: vertical;
+      font-family: inherit;
+      line-height: 1.5;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
       background: #FFFFFF;
       border-color: var(--red-primary);
       box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
     }
 
-    .field input::placeholder {
+    .field input::placeholder,
+    .field textarea::placeholder {
       color: #94A3B8;
       font-weight: 400;
       font-size: 14px;
@@ -964,9 +1018,17 @@
       font-weight: 800;
     }
 
-    details[open] summary .faq-toggle { display: none; }
-    details[open] summary .faq-toggle-open { display: inline; }
-    summary .faq-toggle-open { display: none; }
+    details[open] summary .faq-toggle {
+      display: none;
+    }
+
+    details[open] summary .faq-toggle-open {
+      display: inline;
+    }
+
+    summary .faq-toggle-open {
+      display: none;
+    }
 
     details p {
       padding-top: 8px;
@@ -1285,9 +1347,9 @@
 <body>
   <main class="page">
     <section id="home" class="banner hero">
-      <h1 class="sr-only">HerbeX - Relief Oil આયુર્વેદિક હર્બલ પાવડર</h1>
-      <img class="hero-banner" src="images/banner.avif" alt="HerbeX - Relief Oil આયુર્વેદિક હર્બલ પાવડર બેનર" width="941"
-        height="1671" fetchpriority="high" decoding="async" />
+      <h1 class="sr-only">Herbex - Relief Oil આયુર્વેદિક હર્બલ પાવડર</h1>
+      <img class="hero-banner" src="images/banner.avif" alt="Herbex - Relief Oil આયુર્વેદિક હર્બલ પાવડર બેનર"
+        width="941" height="1671" fetchpriority="high" decoding="async" />
     </section>
 
     <section id="problem-roadmap" class="problem-roadmap">
@@ -1337,12 +1399,12 @@
           <figure>
             <div class="symptom-photo">
               <i class="fa-solid fa-hand-fist"></i>
-              <img src="images/problem4.avif" alt="હાથ વાળવામાં દુખાવો" loading="lazy" decoding="async"
+              <img src="images/problem4.avif" alt="કમરમાં દુખાવો" loading="lazy" decoding="async"
                 onload="this.previousElementSibling.style.visibility='hidden'" onerror="this.hidden=true" />
             </div>
             <figcaption>
               <span class="symptom-node">04</span>
-              <h3>હાથ વાળવામાં દુખાવો</h3>
+              <h3>કમરમાં દુખાવો</h3>
             </figcaption>
           </figure>
         </article>
@@ -1363,17 +1425,17 @@
     </section>
 
     <section id="product-intro" class="product">
-      <div class="eyebrow">HerbeX - Relief Oil નો પરિચય</div>
+      <div class="eyebrow">Herbex - Relief Oil નો પરિચય</div>
       <h2>સાંધાની કાળજી માટે <span class="accent">Ayurvedic Support</span></h2>
       <div class="earcare-poster">
         <div class="earcare-orbit">
           <div class="earcare-orbit-disc">
-            <img class="earcare-orbit-product" src="images/product.avif" alt="HerbeX - Relief Oil Ayurvedic Herbal Powder"
-              loading="lazy" decoding="async" />
+            <img class="earcare-orbit-product" src="images/product.avif"
+              alt="Herbex - Relief Oil Ayurvedic Herbal Powder" loading="lazy" decoding="async" />
           </div>
           <ul class="earcare-callouts" aria-label="Product features">
             <li>
-              <span><strong>6</strong><small>ઔષધિઓ</small></span>
+              <span><strong>14</strong><small>ઔષધિઓ</small></span>
             </li>
             <li>
               <span><strong>100%</strong><small>આયુર્વેદિક</small></span>
@@ -1384,14 +1446,14 @@
           </ul>
         </div>
         <div class="earcare-poster-note">
-          <p>સાંધા અને સ્નાયુઓની રોજિંદી સંભાળ અને હળવી માલિશ માટે લાભદાયી.</p>
+          <p>સાંધા અને સ્નાયુઓની રોજિંદી સંભાળ માટે હળવી માલિશ માટે લાભદાયી.</p>
         </div>
       </div>
     </section>
 
     <section id="how-it-works">
-      <div class="eyebrow">HerbeX - Relief Oil કેવી રીતે કામ કરે છે?</div>
-      <h2>સાંધાની રોજિંદી સંભાળ માટે <span class="accent">ચાર સરળ પગલાં</span></h2>
+      <div class="eyebrow">Herbex - Relief Oil કેવી રીતે કામ કરે છે?</div>
+      <!-- <h2>સાંધાની રોજિંદી સંભાળ માટે <span class="accent">ચાર સરળ પગલાં</span></h2> -->
       <div class="support-grid">
         <article class="support-card">
           <div class="support-image">
@@ -1407,7 +1469,8 @@
         <article class="support-card">
           <div class="support-image">
             <i class="ti ti-activity" aria-hidden="true"></i>
-            <img class="support-photo" src="images/work2.avif" alt="Everyday joint care" loading="lazy" decoding="async">
+            <img class="support-photo" src="images/work2.avif" alt="Everyday joint care" loading="lazy"
+              decoding="async">
           </div>
           <div class="support-copy">
             <h3>Everyday Joint Care</h3>
@@ -1417,8 +1480,7 @@
         <article class="support-card">
           <div class="support-image">
             <i class="ti ti-walk" aria-hidden="true"></i>
-            <img class="support-photo" src="images/work3.avif" alt="Mobility support" loading="lazy"
-              decoding="async">
+            <img class="support-photo" src="images/work3.avif" alt="Mobility support" loading="lazy" decoding="async">
           </div>
           <div class="support-copy">
             <h3>Mobility Support</h3>
@@ -1440,9 +1502,9 @@
     </section>
 
     <section id="ingredients">
-      <div class="eyebrow">મુખ્ય Herbal ઘટકો</div>
+      <!-- <div class="eyebrow">મુખ્ય Herbal ઘટકો</div> -->
       <h2>પસંદગીની <span class="accent">Ayurvedic Herbs</span></h2>
-      <p>HerbeX - Relief Oil માં પરંપરાગત રીતે ઉપયોગમાં લેવાતી ઉત્તમ ઔષધિઓ શામેલ છે:</p>
+      <p>Herbex - Relief Oil માં પરંપરાગત રીતે ઉપયોગમાં લેવાતી ઉત્તમ ઔષધિઓ શામેલ છે:</p>
       <div class="ingredient-grid">
         <article class="herb">
           <div class="herb-image">
@@ -1451,7 +1513,7 @@
               onerror="this.style.display='none'"
               onload="this.style.display='block';this.previousElementSibling.hidden=true">
           </div>
-          <h3>લીમડો</h3>
+          <h3>નીલગિરી</h3>
         </article>
         <article class="herb">
           <div class="herb-image">
@@ -1540,13 +1602,15 @@
     </section>
 
     <section id="start-routine" class="final-cta">
-        <h2>આજના ખાસ લાભો</h2>
+      <h2>આજના ખાસ લાભો</h2>
       <div class="routine-product">
-        <img class="routine-bottle" src="images/capsule.avif" alt="HerbeX - Relief Oil Herbal Powder" loading="lazy"
+        <img class="routine-bottle" src="images/capsule.avif" alt="Herbex - Relief Oil Herbal Powder" loading="lazy"
           decoding="async" width="1280" height="1280" />
         <div class="offer-stickers" aria-label="Offer highlights">
-          <span><i class="ti ti-truck-delivery" aria-hidden="true"></i>FAST DELIVERY<br />SUPPORT<br /><small>ઝડપી હોમ ડિલિવરી</small></span>
-          <span><i class="ti ti-leaf" aria-hidden="true"></i>DIET CHART<br />SUPPORT<br /><small>નિષ્ણાત ડાયેટ ચાર્ટ સપોર્ટ</small></span>
+          <span><i class="ti ti-truck-delivery" aria-hidden="true"></i>FAST DELIVERY<br />SUPPORT<br /><small>ઝડપી હોમ
+              ડિલિવરી</small></span>
+          <span><i class="ti ti-leaf" aria-hidden="true"></i>DIET CHART<br />SUPPORT<br /><small>નિષ્ણાત ડાયેટ ચાર્ટ
+              સપોર્ટ</small></span>
         </div>
       </div>
       <div class="routine-note">સાંધાની રોજિંદી સંભાળ આજે જ શરૂ કરો</div>
@@ -1554,15 +1618,15 @@
 
     <section id="order-form">
       <div class="section-head">
-        <h2>HerbeX - Relief Oil વિશે <span class="accent">માહિતી મેળવો</span></h2>
+        <h2>Herbex - Relief Oil વિશે માહિતી મેળવો</h2>
       </div>
       <div class="form-card" id="inline-order-card">
         <form id="orderForm" method="post"
           action="https://script.google.com/macros/s/AKfycbxZihzv27SMcCKRi3BxYCrQe-5xfm4s3pImYnqvkUalbYdFbJ-nraWgZQkT94ghnFzU/exec"
           accept-charset="UTF-8" onsubmit="return submitForm(event);">
           <input type="hidden" name="key" value="XQP4bdtEZkt3" />
-          <input type="hidden" name="product" value="HerbeX - Relief Oil" />
-          <input type="hidden" name="source" value="HerbeX - Relief Oil Website (Gujarati)" />
+          <input type="hidden" name="product" value="Herbex - Relief Oil" />
+          <input type="hidden" name="source" value="Herbex - Relief Oil Website (Gujarati)" />
           <input type="hidden" name="date" id="date" />
           <input type="hidden" name="event_id" id="event_id" />
           <input type="hidden" name="page_url" id="page_url" />
@@ -1576,8 +1640,8 @@
           <input type="hidden" name="fbclid" /><input type="hidden" name="fbc" /><input type="hidden" name="fbp" />
           <div class="field">
             <label for="name">તમારું પૂરું નામ *</label>
-            <input type="text" id="name" name="name" required autocomplete="name" pattern="[A-Za-z\u0A80-\u0AFF\u0900-\u097F ]+"
-              placeholder="તમારું પૂરું નામ લખો" />
+            <input type="text" id="name" name="name" required autocomplete="name"
+              pattern="[A-Za-z\u0A80-\u0AFF\u0900-\u097F ]+" placeholder="તમારું પૂરું નામ લખો" />
             <div class="err" id="nameError">કૃપા કરીને પૂરું નામ લખો.</div>
           </div>
           <div class="field">
@@ -1586,6 +1650,14 @@
               pattern="[6-9][0-9]{9}" required placeholder="તમારો 10 અંકનો મોબાઇલ નંબર લખો" />
             <div class="err" id="phoneError">
               કૃપા કરીને માન્ય 10 અંકનો મોબાઇલ નંબર લખો.
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">સંપૂર્ણ સરનામું (પિનકોડ સહિત) *</label>
+            <textarea id="address" name="address" rows="3" required autocomplete="street-address"
+              placeholder="તમારું ઘરનું સરનામું, વિસ્તાર, શહેર અને પિનકોડ લખો"></textarea>
+            <div class="err" id="addressError">
+              કૃપા કરીને પિનકોડ સહિત સંપૂર્ણ સરનામું લખો.
             </div>
           </div>
           <button class="submit" id="submitBtn" type="submit">
@@ -1599,13 +1671,13 @@
     </section>
 
     <section id="customer-reviews">
-      <div class="eyebrow">ગ્રાહકોના અનુભવ</div>
-      <h2>વાસ્તવિક ગ્રાહકોના <span class="accent">પ્રતિભાવ</span></h2>
+      <!-- <div class="eyebrow">ગ્રાહકોના અનુભવ</div> -->
+      <h2>વાસ્તવિક ગ્રાહકોના પ્રતિભાવ</h2>
       <div class="customer-reviews-list">
         <article class="customer-review">
           <div class="customer-portrait">
-            <div class="customer-photo"><span aria-hidden="true">શિ</span><img src="images/test1.avif" alt="શિવાની ચૌહાણ"
-                loading="lazy" decoding="async" onerror="this.hidden=true"
+            <div class="customer-photo"><span aria-hidden="true">શિ</span><img src="images/test1.avif"
+                alt="શિવાની ચૌહાણ" loading="lazy" decoding="async" onerror="this.hidden=true"
                 onload="this.hidden=false;this.previousElementSibling.hidden=true"></div>
             <span class="customer-city">અમદાવાદ</span>
           </div>
@@ -1614,7 +1686,8 @@
               <h3>શિવાની ચૌહાણ</h3><span class="customer-rating" aria-hidden="true">★★★★★</span>
             </header>
             <blockquote>
-              <p>“ઘૂંટણમાં દુખાવો અને જકડનના કારણે સીડી ચઢવી મુશ્કેલ બની ગઈ હતી. HerbeX - Relief Oil નિયમિત ઉપયોગ કર્યા પછી સાંધામાં ખૂબ જ હળવાશ અને રાહત અનુભવાય છે.”</p>
+              <p>ઘૂંટણમાં દુખાવો અને જકડનના કારણે સીડી ચઢવી મુશ્કેલ બની ગઈ હતી. Herbex - Relief Oil નિયમિત ઉપયોગ કર્યા
+                પછી સાંધામાં ખૂબ જ હળવાશ અને રાહત અનુભવાય છે.</p>
             </blockquote>
           </div>
         </article>
@@ -1630,14 +1703,15 @@
               <h3>દીપક યાદવ</h3><span class="customer-rating" aria-hidden="true">★★★★★</span>
             </header>
             <blockquote>
-              <p>“સવારે ઉઠતાં જ સાંધામાં ખૂબ જકડન રહેતી હતી. HerbeX - Relief Oil એ મને સવારની જકડાઈ જવાની સમસ્યામાં ખૂબ જ સારી રાહત આપી છે.”</p>
+              <p>સવારે ઉઠતાં જ સાંધામાં ખૂબ જકડન રહેતી હતી. Herbex - Relief Oil એ મને સવારની જકડાઈ જવાની સમસ્યામાં ખૂબ
+                જ સારી રાહત આપી છે.</p>
             </blockquote>
           </div>
         </article>
         <article class="customer-review">
           <div class="customer-portrait">
-            <div class="customer-photo"><span aria-hidden="true">અં</span><img src="images/test3.avif" alt="અંજલિ ગુપ્તા"
-                loading="lazy" decoding="async" onerror="this.hidden=true"
+            <div class="customer-photo"><span aria-hidden="true">અં</span><img src="images/test3.avif"
+                alt="અંજલિ ગુપ્તા" loading="lazy" decoding="async" onerror="this.hidden=true"
                 onload="this.hidden=false;this.previousElementSibling.hidden=true"></div>
             <span class="customer-city">વડોદરા</span>
           </div>
@@ -1646,7 +1720,8 @@
               <h3>અંજલિ ગુપ્તા</h3><span class="customer-rating" aria-hidden="true">★★★★★</span>
             </header>
             <blockquote>
-              <p>“પહેલાં ખભા અને હાથમાં વારંવાર દુખાવો રહેતો હતો. HerbeX - Relief Oil ને દિનચર્યામાં સામેલ કર્યા પછી મને ખૂબ જ સરસ આરામ મળ્યો છે.”</p>
+              <p>પહેલાં ખભા અને હાથમાં વારંવાર દુખાવો રહેતો હતો. Herbex - Relief Oil ને દિનચર્યામાં સામેલ કર્યા પછી મને
+                ખૂબ જ સરસ આરામ મળ્યો છે.</p>
             </blockquote>
           </div>
         </article>
@@ -1654,28 +1729,35 @@
     </section>
 
     <section id="faqs">
-      <div class="eyebrow">FAQs</div>
-      <h2>વારંવાર પૂછાતા <span class="accent">પ્રશ્નો</span></h2>
+      <!-- <div class="eyebrow">FAQs</div> -->
+      <h2>વારંવાર પૂછાતા પ્રશ્નો</h2>
       <details>
-        <summary>HerbeX - Relief Oil શું છે? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span></summary>
-        <p>HerbeX - Relief Oil એક આયુર્વેદિક હર્બલ પાવડર છે, જેમાં લીમડો, ગળો, બ્રાહ્મી, હળદર, તુલસી, અશ્વગંધા અને અન્ય પારંપરિક ઔષધિઓ સામેલ છે જે સાંધાની સંભાળ માટે અત્યંત ગુણકારી છે.</p>
+        <summary>Herbex - Relief Oil શું છે? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span>
+        </summary>
+        <p>Herbex - Relief Oil એક આયુર્વેદિક હર્બલ તેલ છે, જેમાં નીલગિરી, ગળો, બ્રાહ્મી, હળદર, તુલસી, અશ્વગંધા અને અન્ય
+          પારંપરિક ઔષધિઓ સામેલ ૧૪ જે સાંધાની સંભાળ માટે અત્યંત ગુણકારી છે.</p>
       </details>
       <details>
-        <summary>શું HerbeX - Relief Oil સાંધાના દુખાવા અને જકડાઈ જવામાં મદદરૂપ છે? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span></summary>
+        <summary>શું HerbeX - Relief Oil સાંધાનો દુખાવો અને સ્નાયુઓની જકડન દૂર કરવામાં મદદરૂપ છે ? <span
+            class="faq-toggle">+</span><span class="faq-toggle-open">−</span></summary>
         <p>હા, HerbeX - Relief Oil સાંધાનો દુખાવો, સવારની જકડન અને સ્નાયુઓના તણાવમાં સામાન્ય રાહત અને સારસંભાળમાં ખૂબ જ મદદ કરે છે.</p>
       </details>
       <details>
-        <summary>આનો ઉપયોગ કેવી રીતે કરવો? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span></summary>
-        <p>પ્રોડક્ટ લેબલ પર આપેલી સૂચનાઓ મુજબ તેને તમારી દિનચર્યામાં નિયમિત સામેલ કરો.</p>
+        <summary>Herbex - Relief Oil ઉપયોગ કેવી રીતે કરવો? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span>
+        </summary>
+        <p>Herbex - Relief Oil લેબલ પર આપેલી સૂચનાઓ મુજબ તેને તમારી દિનચર્યામાં નિયમિત સામેલ કરો.</p>
       </details>
       <details>
-        <summary>શું આની કોઈ આડઅસર (Side Effects) છે? <span class="faq-toggle">+</span><span class="faq-toggle-open">−</span></summary>
+        <summary>શું Herbex - Relief Oil આની કોઈ આડઅસર (Side Effects) છે? <span class="faq-toggle">+</span><span
+            class="faq-toggle-open">−</span></summary>
         <p>ના, આ 100% કુદરતી આયુર્વેદિક ઘટકોથી બનેલું સુરક્ષિત ઉત્પાદન છે.</p>
       </details>
     </section>
 
     <div id="disclaimer" class="disclaimer">
-      <p>Disclaimer: HerbeX - Relief Oil is not intended to diagnose, treat, or cure any medical condition and is not a substitute for professional medical advice. If you experience severe pain or persistent discomfort, consult a qualified physician. Please read the product label and follow the instructions provided.</p>
+      <p>Disclaimer: Herbex - Relief Oil is not intended to diagnose, treat, or cure any medical condition and is not a
+        substitute for professional medical advice. If you experience severe pain or persistent discomfort, consult a
+        qualified physician. Please read the product label and follow the instructions provided.</p>
     </div>
 
     <div class="policy-links">
@@ -1800,6 +1882,11 @@
 
     const nameInput = $("#name");
     const phoneInput = $("#phone");
+    const addressInput = $("#address");
+
+    addressInput?.addEventListener("input", () => {
+      err("addressError", false);
+    });
 
     nameInput?.addEventListener("input", () => {
       nameInput.value = nameInput.value
@@ -1822,6 +1909,10 @@
 
     function validPhone(v) {
       return /^[6-9][0-9]{9}$/.test(v);
+    }
+
+    function validAddress(v) {
+      return v.trim().length >= 10 && /\d{6}/.test(v);
     }
 
     function err(id, on) {
@@ -1848,15 +1939,19 @@
       const loading = document.getElementById("loading");
       const name = nameInput.value.trim().replace(/\s+/g, " ");
       const phone = phoneInput.value.replace(/\D/g, "");
+      const address = addressInput.value.trim().replace(/[ \t]+/g, " ");
       const nameOk = validName(name);
       const phoneOk = validPhone(phone);
+      const addressOk = validAddress(address);
 
       err("nameError", !nameOk);
       err("phoneError", !phoneOk);
-      if (!nameOk || !phoneOk) return false;
+      err("addressError", !addressOk);
+      if (!nameOk || !phoneOk || !addressOk) return false;
 
       nameInput.value = name;
       phoneInput.value = phone;
+      addressInput.value = address;
       capture();
       setHidden(
         "date",
@@ -1907,12 +2002,12 @@
     window.submitForm = submitForm;
 
     const contents = {
-      privacy: `<div class="pp-mtitle"><i class="ti ti-shield-lock"></i> Privacy Policy</div><div class="pp-mbadge">Secure & Encrypted</div><p>HerbeX - Relief Oil gives the highest priority to protecting your personal information. Your name, phone number, and address collected during an order are used only for order delivery. Your data is not shared with any third party.</p>`,
+      privacy: `<div class="pp-mtitle"><i class="ti ti-shield-lock"></i> Privacy Policy</div><div class="pp-mbadge">Secure & Encrypted</div><p>Herbex - Relief Oil gives the highest priority to protecting your personal information. Your name, phone number, and address collected during an order are used only for order delivery. Your data is not shared with any third party.</p>`,
       terms: `<div class="pp-mtitle"><i class="ti ti-file-description"></i> Terms & Conditions</div><div class="pp-mbadge">Terms and Conditions</div><p>This product is an Ayurvedic health supplement. Results may vary depending on individual body constitution. It is not a medical drug but is intended to support everyday wellness.</p>`,
       shipping: `<div class="pp-mtitle"><i class="ti ti-truck-delivery"></i> Shipping Policy</div><div class="pp-mbadge">Free Delivery Across India</div><p>We provide safe and fast delivery across India within 3–7 business days. Tracking updates are sent after the order has been dispatched.</p>`,
       cancel: `<div class="pp-mtitle"><i class="ti ti-refresh"></i> Cancellation Policy</div><div class="pp-mbadge">Easy Return Policy</div><p>You can easily cancel your order before it is dispatched. If the product arrives damaged, a return is available within 7 days.</p>`,
-      contact: `<div class="pp-mtitle"><i class="ti ti-headset"></i> Contact Us</div><p>The HerbeX - Relief Oil support team is available Monday to Saturday, from 9:00 AM to 6:00 PM.</p><div class="pp-cgrid"><div class="pp-citem"><i class="ti ti-phone"></i><div class="pp-clbl">Call / WhatsApp</div><div class="pp-cval">+91 88606 06078</div></div><div class="pp-citem"><i class="ti ti-mail"></i><div class="pp-clbl">Email</div><div class="pp-cval">support@ssherbalindia.com</div></div><div class="pp-citem"><i class="ti ti-clock"></i><div class="pp-clbl">Response Time</div><div class="pp-cval">Within 24 hours</div></div></div>`,
-      disclaimer: `<div class="pp-mtitle">Legal Disclaimer</div><div class="pp-mbadge">Important Notice</div><p>HerbeX - Relief Oil is a natural wellness supplement. It is not intended to treat or cure any serious disease. If you are pregnant or have a serious medical condition, consult your doctor.</p>`,
+      contact: `<div class="pp-mtitle"><i class="ti ti-headset"></i> Contact Us</div><p>The Herbex - Relief Oil support team is available Monday to Saturday, from 9:00 AM to 6:00 PM.</p><div class="pp-cgrid"><div class="pp-citem"><i class="ti ti-phone"></i><div class="pp-clbl">Call / WhatsApp</div><div class="pp-cval">+91 9327272356</div></div><div class="pp-citem"><i class="ti ti-clock"></i><div class="pp-clbl">Response Time</div><div class="pp-cval">Within 24 hours</div></div></div>`,
+      disclaimer: `<div class="pp-mtitle">Legal Disclaimer</div><div class="pp-mbadge">Important Notice</div><p>Herbex - Relief Oil is a natural wellness supplement. It is not intended to treat or cure any serious disease. If you are pregnant or have a serious medical condition, consult your doctor.</p>`,
     };
 
     function openModal(k) {
